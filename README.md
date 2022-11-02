@@ -2,15 +2,27 @@
 
 ## Getting started
 
-Para clonar este repositorio
+Para clonar este repositorio, dentro de la carpeta projectApp:
 
 Crear la carpeta node_modules:
 
 `npm install`
 
-Crear la carpeta www, build y para poder correrlo en local:
+Crear la carpeta www/, build/ y para poder correrlo en local:
 
 `ionic serve`
+
+Configurar capacitor
+
+`ionic build`
+
+Cada vez que se realice un build hay que copiar cambios a los proyectos nativos:
+
+`ionic cap copy`
+
+Despues de actualizar porciones de codigo (como agregar un nuevo plugin) usar el comando sync:
+
+`ionic cap sync`
 
 ## Add your files
 
