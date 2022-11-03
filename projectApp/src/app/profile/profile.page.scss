@@ -1,9 +1,9 @@
 ion-content {
-    --background: white;
+    --background: #FBFBFD;
 }
 
 .status-bar {
-    background-color: white;
+    background-color: #F9C700;
     height: 44px;
 }
 
@@ -12,7 +12,7 @@ ion-toolbar {
     align-items: center;
     padding-left: 25px;
     height: 97px;
-    --background: white;
+    --background: #F9C700;
     --border-color: black;
 
     ion-label{
