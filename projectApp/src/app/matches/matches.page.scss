@@ -1,0 +1,82 @@
+ion-content {
+    --background: #FBFBFD;
+}
+
+.status-bar {
+    background-color: #F9C700;
+    height: 44px;
+}
+
+ion-toolbar {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    height: 97px;
+    --background: #F9C700;
+    --border-color: black;
+
+    ion-label{
+        font-family: 'Roboto', sans-serif;
+        font-size: 38px;
+        font-weight: 600;
+        color: black;
+    }
+}
+
+ion-label{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#header-label {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+.matches-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.match-container {
+    background-color: #3E2723;
+    width: 20rem;
+    height: 7rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding-top: .5rem;
+    row-gap: 1.5rem;
+}
+
+.labels-container {
+    padding-top: .5rem;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.score-container {
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.next-match-container {
+    background-color: #3E2723;
+    width: 20rem;
+    height: 7rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding-top: .5rem;
+    row-gap: 1.5rem;
+}
+

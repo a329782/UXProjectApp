@@ -1,10 +1,66 @@
 <ion-header mode="ios">
+  <div class="status-bar">
+      
+  </div>
   <ion-toolbar>
-    <ion-title size="large">Partidos</ion-title>
+    
+    <ion-label>Partidos</ion-label>
+
+    <div class="toolbar-line"></div>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content [forceOverscroll]="false">
-  
+  <div class="matches-container">
+
+    <ion-label id="header-label">Partido próximo/actual</ion-label>
+    <div class="match-container">
+
+      <div class="labels-container">
+        <ion-label>Correcaminos</ion-label>
+        <ion-label>vs</ion-label>
+        <ion-label>Cadetes</ion-label>
+      </div>
+
+      <div class="score-container">
+        <ion-label>4</ion-label>
+        <ion-label>12</ion-label>
+      </div>
+
+    </div>
+
+    <ion-label id="header-label">Próximos partidos</ion-label>
+    <div class="next-match-container">
+
+      <div class="labels-container">
+        <ion-label>Capis</ion-label>
+        <ion-label>vs</ion-label>
+        <ion-label>Peloteros</ion-label>
+      </div>
+
+      <div class="score-container">
+        <ion-label>3</ion-label>
+        <ion-label>5</ion-label>
+      </div>
+
+    </div>
+
+    <div class="next-match-container">
+
+      <div class="labels-container">
+        <ion-label>Cachorros</ion-label>
+        <ion-label>vs</ion-label>
+        <ion-label>Abuelos F.C.</ion-label>
+      </div>
+
+      <div class="score-container">
+        <ion-label>7</ion-label>
+        <ion-label>4</ion-label>
+      </div>
+
+    </div>
+
+  </div>
+
 </ion-content>
