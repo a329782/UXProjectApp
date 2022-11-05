@@ -1,9 +1,102 @@
-<ion-header>
+<ion-header mode="ios">
+  <div class="status-bar">
+      
+  </div>
   <ion-toolbar>
-    <ion-title>team</ion-title>
+    
+    <div class="toolbar-container">
+      <ion-label>Mis equipos</ion-label>
+      <ion-button fill="clear" shape="default">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+
+    </div>
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [forceOverscroll]="false">
+
+  <div class="join-team-container">
+    <ion-button fill="clear" shape="default">
+      <ion-label>Unirse a equipo</ion-label>
+    </ion-button>
+  </div>
+  
+  <div class="container">
+
+    <div class="full-day-container">
+      <ion-label class="day-lbl">Liga Miercoles</ion-label>
+      <ion-button expand="block" fill="solid" shape="default" class="day-bttn">
+        <div class="liga-bttn-container">
+          <ion-label>Los temerarios</ion-label>
+
+          <div class="pts-container">
+            <ion-label class="info-lbl">pts</ion-label>
+            <ion-label>17</ion-label>
+          </div>
+
+          <div class="pos-container">
+            <ion-label class="info-lbl">pos</ion-label>
+            <ion-label>3ro</ion-label>
+          </div>
+
+        </div>
+      </ion-button>
+    </div>
+
+    <div class="full-day-container">
+      <ion-label class="day-lbl">Liga Viernes</ion-label>
+      <ion-button expand="block" fill="solid" shape="default" class="day-bttn">
+        <div class="liga-bttn-container">
+          <ion-label>Los cadetes</ion-label>
+
+          <div class="pts-container">
+            <ion-label class="info-lbl">pts</ion-label>
+            <ion-label>24</ion-label>
+          </div>
+
+          <div class="pos-container">
+            <ion-label class="info-lbl">pos</ion-label>
+            <ion-label>1ro</ion-label>
+          </div>
+
+        </div>
+      </ion-button>
+    </div>
+    
+    <div class="full-day-container">
+      <ion-label class="day-lbl">Liga Sábado</ion-label>
+      <ion-button expand="block" fill="solid" shape="default" class="day-bttn">
+        <div class="liga-bttn-container">
+          <ion-label>Los capis</ion-label>
+
+          <div class="pts-container">
+            <ion-label class="info-lbl">pts</ion-label>
+            <ion-label>11</ion-label>
+          </div>
+
+          <div class="pos-container">
+            <ion-label class="info-lbl">pos</ion-label>
+            <ion-label>7mo</ion-label>
+          </div>
+
+        </div>
+      </ion-button>
+    </div>
+
+    <div class="sol-pend-container">
+      <ion-label class="sol-pend-lbl">Solicitudes pendientes</ion-label>
+      <ion-label class="day-lbl">Liga Lunes</ion-label>
+      <ion-button expand="block" fill="solid" shape="default" class="day-bttn">
+        <div class="liga-bttn-container">
+          <ion-label>Los abuelos F.C.</ion-label>
+
+        </div>
+      </ion-button>
+    </div>
+
+  </div>
+
 
 </ion-content>

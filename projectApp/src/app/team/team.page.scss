@@ -1,0 +1,116 @@
+.status-bar {
+    background-color: #F9C700;
+    height: 44px;
+}
+
+ion-toolbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 25px;
+    height: 97px;
+    --background: #F9C700;
+    --border-color: black;
+
+    .toolbar-container{
+        display: flex;
+        align-items: center;
+    }
+
+    ion-label{
+        font-family: 'Roboto', sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        color: black;
+    }
+
+    ion-button {
+        margin-left: auto;
+        margin-right: 4%;
+        --color: black;
+    }
+    ion-icon {
+        font-size: 2.1rem;
+    }
+}
+
+ion-content {
+    --background: #FBFBFD;
+    --color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.join-team-container {
+    display: flex;
+    justify-content: flex-end;
+    ion-button {
+        //--background: aqua;  
+        ion-label {
+            text-decoration: underline;
+        }
+        padding-right: .1%;
+    }
+}
+
+.container {
+    //background-color: red;
+    margin: 4%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    ion-button{
+        --background: #3e2723;
+        --background-activated: rgba(255, 255, 255, 0.1);
+        height: 61px;
+    }
+}
+
+.full-day-container {
+    padding-top: 10%;
+}
+
+.day-lbl {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 1%;
+}
+
+.liga-bttn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .pts-container{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: .6rem;
+        height: 85%;
+        justify-content: space-around;
+    }
+    .pos-container{
+        display: flex;
+        flex-direction: column;
+        height: 85%;
+        justify-content: space-around;
+    }
+}
+
+.info-lbl {
+    color: #FAC600;
+}
+
+
+.sol-pend-container {
+    padding-top: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sol-pend-lbl {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-left: 1%;
+    padding-bottom: 7%;
+}
