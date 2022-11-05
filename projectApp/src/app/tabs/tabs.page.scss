@@ -1,0 +1,41 @@
+ion-tab-button.tab-selected {
+    //color: #e9c22a;
+    color: #F9C700;
+    .svgColor {
+        filter: invert(66%) sepia(88%) saturate(849%) hue-rotate(6deg) brightness(105%) contrast(102%);
+    }
+}
+
+ion-tab-button{
+    color: black
+}
+
+ion-label{
+    color: black
+}
+
+#team {
+    height: 20px;
+    width: 40px;
+    padding-top: 11px;
+}
+
+#matches {
+    font-size: 40px;
+    padding-top: 9px;
+    margin: 0;
+    padding-bottom: 2px;
+}
+
+#statistics {
+    font-size: 40px;
+    padding-top: 9px;
+    margin: 0;
+    padding-bottom: 2px;
+}
+
+#profile {
+    font-size: 37px;
+    margin: 0;
+}
+
