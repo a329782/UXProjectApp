@@ -41,42 +41,49 @@ ion-label{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 5%;
     gap: 2rem;
 }
 
 .match-container {
     background-color: #3E2723;
-    width: 20rem;
+    width: 100%;
     height: 7rem;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
-    padding-top: .5rem;
     row-gap: 1.5rem;
 }
 
-.labels-container {
-    padding-top: .5rem;
-    font-size: 1.3rem;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.score-container {
-    font-size: 2.4rem;
+.team-container{
     display: flex;
     justify-content: space-around;
-    align-items: baseline;
+    align-items: center;
+    height: 100%;
+    ion-label{
+        font-size: 1.3rem
+    }
+    .score-lbl{
+        font-size: 2.4rem;
+    }
 }
 
-.next-match-container {
-    background-color: #3E2723;
-    width: 20rem;
-    height: 7rem;
-    border-radius: 4px;
+.team-a-container{
     display: flex;
     flex-direction: column;
-    padding-top: .5rem;
-    row-gap: 1.5rem;
+    justify-content: center;
+    row-gap: 20%;
+    align-items: center;
+    height: 100%;
+
+}
+
+.team-b-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20%;
+    align-items: center;
+    height: 100%;
 }
 
