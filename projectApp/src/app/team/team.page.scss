@@ -44,7 +44,6 @@ ion-content {
     display: flex;
     justify-content: flex-end;
     ion-button {
-        //--background: aqua;  
         ion-label {
             text-decoration: underline;
         }
@@ -53,9 +52,7 @@ ion-content {
 }
 
 .container {
-    //background-color: red;
     margin: 4%;
-    height:100%;
     display: flex;
     flex-direction: column;
     ion-button{

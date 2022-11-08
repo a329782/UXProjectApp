@@ -26,7 +26,7 @@ ion-content {
     font-family: 'Roboto', sans-serif;
 }
 
-.info-icon-container {
+.item-container {
     display: flex;
     justify-content: space-between;
     ion-item{
@@ -53,7 +53,6 @@ ion-content {
 
 .container {
     margin: 5%;
-    height: 85%;
     display: flex;
     flex-direction: column;
     ion-button{
