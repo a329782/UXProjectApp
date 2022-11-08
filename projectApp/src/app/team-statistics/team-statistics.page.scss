@@ -1,0 +1,29 @@
+ion-toolbar {
+    display: flex;
+    height: 97px;
+    --background: #F9C700;
+    --border-color: black;
+    .toolbar-container{
+        flex-direction: row;
+        height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        ion-back-button{
+            --color: black;
+        }
+        ion-label{
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+        }
+        .season-lbl{
+            font-size: 14px;
+            opacity: 50%;
+        }
+    }
+}
+
+
+
