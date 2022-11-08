@@ -1,12 +1,130 @@
-<ion-header [translucent]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Partidos</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header mode="ios">
+  <div class="status-bar">
+      
+  </div>
+
+  <ion-toolbar>
+    
+    <div class="toolbar-container">
+      <ion-label>Estadísticas</ion-label>
+    </div>
+    
+    
+  </ion-toolbar>
 </ion-header>
 
-
 <ion-content [forceOverscroll]="false">
+
+  <div class="info-icon-container">
+
+    <ion-item>
+      <ion-select placeholder="Cambiar liga" interface="popover">
+        <ion-select-option value="martes">Liga Martes</ion-select-option>
+        <ion-select-option value="viernes">Liga Viernes</ion-select-option>
+        <ion-select-option value="sabado">Liga Sabado</ion-select-option>
+      </ion-select>
+      <ion-icon name="chevron-down-circle-outline"></ion-icon>
+    </ion-item>
+  </div>
   
+  <div class="container">
+
+    <div class="full-day-container">
+      <div class="info-container">
+
+      <ion-label class="day-lbl">Liga Miercoles</ion-label>
+      <ion-label class="info-pts-lbl">PTS</ion-label>
+      <ion-label class="info-pos-lbl">POS</ion-label>
+
+    </div>
+
+      <ion-button expand="block" fill="solid" shape="default" class="day-bttn">
+
+        <div class="team-bttn-container">
+          <ion-label>Los correcaminos</ion-label>
+          <ion-label class="pts-lbl">31</ion-label>
+          <ion-label class="pos-lbl">1ro</ion-label>
+        </div>
+
+      </ion-button>
+
+      <ion-button expand="block" fill="solid" shape="default" class="day-bttn">
+
+        <div class="team-bttn-container">
+          <ion-label>La PRI</ion-label>
+          <ion-label class="pts-lbl">28</ion-label>
+          <ion-label class="pos-lbl">2do</ion-label>
+        </div>
+        
+      </ion-button>
+
+      <ion-button expand="block" fill="solid" shape="default" class="day-bttn">
+
+        <div class="team-bttn-container">
+          <ion-label>Abuelos F.C.</ion-label>
+          <ion-label class="pts-lbl">26</ion-label>
+          <ion-label class="pos-lbl">3ro</ion-label>
+        </div>
+        
+      </ion-button>
+
+      <ion-button expand="block" fill="solid" shape="default" class="day-bttn">
+
+        <div class="team-bttn-container">
+          <ion-label>Sacachispas</ion-label>
+          <ion-label class="pts-lbl">25</ion-label>
+          <ion-label class="pos-lbl">4to</ion-label>
+        </div>
+        
+      </ion-button>
+
+      <ion-button expand="block" fill="solid" shape="default" class="day-bttn">
+
+        <div class="team-bttn-container">
+          <ion-label>Rico pollo</ion-label>
+          <ion-label class="pts-lbl">25</ion-label>
+          <ion-label class="pos-lbl">5to</ion-label>
+        </div>
+        
+      </ion-button>
+      
+      
+      <ion-button expand="block" fill="solid" shape="default" class="day-bttn">
+        
+        <div class="team-bttn-container">
+          <ion-label>Cuervos</ion-label>
+          <ion-label class="pts-lbl">21</ion-label>
+          <ion-label class="pos-lbl">6to</ion-label>
+        </div>
+        
+      </ion-button>
+      
+      <ion-button expand="block" fill="solid" shape="default" class="day-bttn">
+        
+        <div class="team-bttn-container">
+          <ion-label>Los capis</ion-label>
+          <ion-label class="pts-lbl">19</ion-label>
+          <ion-label class="pos-lbl">7mo</ion-label>
+        </div>
+        
+      </ion-button>
+      
+      <ion-button expand="block" fill="solid" shape="default" class="day-bttn">
+  
+        <div class="team-bttn-container">
+          <ion-label>Balones ponchados</ion-label>
+          <ion-label class="pts-lbl">18</ion-label>
+          <ion-label class="pos-lbl">8vo</ion-label>
+        </div>
+        
+      </ion-button>
+      
+    </div>
+    
+
+
+
+  </div>
+
+
 </ion-content>
