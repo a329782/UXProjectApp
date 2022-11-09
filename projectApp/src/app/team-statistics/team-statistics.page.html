@@ -2,7 +2,10 @@
   <ion-toolbar>
     
     <div class="toolbar-container">
-      <ion-back-button text="" defaultHref="/tabs/team"></ion-back-button>
+      <div class="back-btn-container">
+        <ion-back-button text="Atrás" defaultHref="/tabs/team"></ion-back-button>
+        
+      </div>
       <ion-label>Estadísticas</ion-label>
       <ion-label class="season-lbl">Jornada 10</ion-label>
     </div>
@@ -10,6 +13,96 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content forceOverscroll="false">
+  <div class="container">
 
+    <div class="statistics-container">
+
+      <div class="team-info-container">
+        <ion-label class="team-lbl">Los temerarios</ion-label>
+
+        <ion-button id="open-modal" expand="block" fill="clear">
+          <ion-icon name="alert-circle-outline"></ion-icon>
+        </ion-button>
+          
+      </div>
+
+      <div class="button-container">
+
+        <div class="stats-container">
+          <div class="info-container">
+            <ion-label class="stats-info-lbl">JJ</ion-label>
+            <ion-label class="num-lbl">10</ion-label>
+          </div>
+
+          <div class="info-container">
+            <ion-label class="stats-info-lbl">JG</ion-label>
+            <ion-label class="num-lbl">5</ion-label>
+          </div>
+
+          <div class="info-container">
+            <ion-label class="stats-info-lbl">JP</ion-label>
+            <ion-label class="num-lbl">3</ion-label>
+          </div>
+
+          <div class="info-container">
+            <ion-label class="stats-info-lbl">JE</ion-label>
+            <ion-label class="num-lbl">2</ion-label>
+          </div>
+
+          <div class="info-container">
+            <ion-label class="stats-info-lbl">GF</ion-label>
+            <ion-label class="num-lbl">27</ion-label>
+          </div>
+
+          <div class="info-container">
+            <ion-label class="stats-info-lbl">GC</ion-label>
+            <ion-label class="num-lbl">18</ion-label>
+          </div>
+
+          <div class="info-container">
+            <ion-label class="stats-info-lbl">PTS</ion-label>
+            <ion-label class="num-lbl">17</ion-label>
+          </div>
+
+          <div class="info-container">
+            <ion-label class="stats-info-lbl">POS</ion-label>
+            <ion-label class="num-lbl">3ro</ion-label>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+    
+    <div class="plyr-goals-container">
+      <ion-label class="goleo-lbl">Goleo</ion-label>
+      <div class="plyr-container">
+        <ion-label class="name-lbl">Juan Pérez</ion-label>
+        <ion-label class="num-goal-lbl">14</ion-label>
+        <ion-label class="goals-lbl">Goles</ion-label>
+      </div>
+      <div class="plyr-container">
+        <ion-label class="name-lbl">Daniel García</ion-label>
+        <ion-label class="num-goal-lbl">10</ion-label>
+        <ion-label class="goals-lbl">Goles</ion-label>
+      </div>
+      <div class="plyr-container">
+        <ion-label class="name-lbl">Alexander Martínez</ion-label>
+        <ion-label class="num-goal-lbl">8</ion-label>
+        <ion-label class="goals-lbl">Goles</ion-label>
+      </div>
+      <div class="plyr-container">
+        <ion-label class="name-lbl">Mateo López</ion-label>
+        <ion-label class="num-goal-lbl">7</ion-label>
+        <ion-label class="goals-lbl">Goles</ion-label>
+      </div>
+      <div class="plyr-container">
+        <ion-label class="name-lbl">Leonardo Rodríguez</ion-label>
+        <ion-label class="num-goal-lbl">5</ion-label>
+        <ion-label class="goals-lbl">Goles</ion-label>
+      </div>
+    </div>
+
+  </div>
 </ion-content>
