@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'profile-edit-mode',
     loadChildren: () => import('./profile-edit-mode/profile-edit-mode.module').then( m => m.ProfileEditModePageModule)
+  },
+  {
+    path: 'team-statistics',
+    loadChildren: () => import('./team-statistics/team-statistics.module').then( m => m.TeamStatisticsPageModule)
   }
 ];
 
