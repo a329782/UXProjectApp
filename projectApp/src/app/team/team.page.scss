@@ -46,6 +46,35 @@ ion-content {
     }
 }
 
+ion-modal{
+    --height: 220px;
+    --border-radius: 16px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --width: fit-content;
+    --min-width: 330px;
+    ion-toolbar{
+        height: 50px;
+    }
+    ion-title{
+        font-size: 1rem;
+    }
+    ion-content{
+        --background: #FBFBFD;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        .modal-lbl-container{
+            display: flex;
+            flex-direction: column;
+            font-size: 1.6rem;
+            margin: 5%;
+            ion-label{
+                margin: 1%;
+                //preguntar si dejar las palabras asi o que se alineen a su margen
+            }
+        }
+    }
+}
+
 .container {
     margin: 4%;
     display: flex;
