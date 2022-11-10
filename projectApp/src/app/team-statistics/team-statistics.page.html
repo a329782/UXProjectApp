@@ -25,6 +25,32 @@
           <ion-icon name="alert-circle-outline"></ion-icon>
         </ion-button>
           
+        <ion-modal #modal trigger="open-modal">
+          <ng-template>
+            <ion-content class="modal-content">
+              <ion-toolbar>
+                <ion-title>Información</ion-title>
+                <ion-buttons slot="end">
+                  <ion-button color="light" (click)="modal.dismiss()" class="modal-close-btn">
+                    Cerrar
+                  </ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+              <div class="modal-lbl-container">
+                <ion-label>JJ. Juegos Jugados.</ion-label>
+                <ion-label>JG. Juegos Ganados.</ion-label>
+                <ion-label>JP. Juego Perdidos.</ion-label>
+                <ion-label>JE. Juegos Empatados.</ion-label>
+                <ion-label>GF. Goles a Favor.</ion-label>
+                <ion-label>GC. Goles en Contra.</ion-label>
+                <ion-label>PTS. Puntos.</ion-label>
+                <ion-label>POS. Posición.</ion-label>
+              </div>
+              
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+
       </div>
 
       <div class="button-container">
