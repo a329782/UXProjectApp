@@ -20,13 +20,62 @@ ion-toolbar {
     }
 
     ion-button {
-        margin-left: auto;
-        margin-right: 4%;
+        margin-left: auto;        
         --color: black;
     }
     ion-icon {
         font-size: 2.1rem;
     }
+}
+
+ion-modal.notification-modal{
+    --height: 44%;
+    --width: 100%;
+    --border-radius: 16px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    align-items: flex-start;
+    ion-toolbar{
+        height: 50px;
+    }
+    ion-title.modal-title{
+        font-size: 1.4rem;
+    }
+
+    ion-content.modal-content{
+        --background: #FBFBFD;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        .notification-container{
+            display: flex;
+            flex-direction: column;
+            background-color: #3e2723;
+            ion-label.time-ago-label{
+                align-self: flex-end;
+                color: white;
+                opacity: 40%;
+                padding-top: 2%;
+                padding-right: 2%;
+            }
+            .notification{
+                display: flex;
+                align-items: center;
+                padding: 2%;
+                width: 100%;
+                height: auto;
+                border-bottom: 1px solid black;
+                ion-icon{
+                    width: 71px;
+                    height: 36px;
+                }
+                ion-label{
+                    margin-left: 10px;
+                    color: white;
+                    font-size: 1.2rem;
+                }
+            }
+        } 
+    }
+
 }
 
 ion-content {
@@ -43,35 +92,6 @@ ion-content {
             text-decoration: underline;
         }
         padding-right: .1%;
-    }
-}
-
-ion-modal{
-    --height: 220px;
-    --border-radius: 16px;
-    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --width: fit-content;
-    --min-width: 330px;
-    ion-toolbar{
-        height: 50px;
-    }
-    ion-title{
-        font-size: 1rem;
-    }
-    ion-content{
-        --background: #FBFBFD;
-        font-family: 'Roboto', sans-serif;
-        display: flex;
-        .modal-lbl-container{
-            display: flex;
-            flex-direction: column;
-            font-size: 1.6rem;
-            margin: 5%;
-            ion-label{
-                margin: 1%;
-                //preguntar si dejar las palabras asi o que se alineen a su margen
-            }
-        }
     }
 }
 
