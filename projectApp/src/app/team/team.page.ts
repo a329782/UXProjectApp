@@ -55,4 +55,15 @@ export class TeamPage implements OnInit {
     await alert.present();
   }
 
+  async presentSolAlert() {
+    const alert = await this.alertController.create({
+      header: "Aún no has sido aceptado.",
+      message: "Enviaste esta solicitud el 17/10/2022",
+      buttons: ["Aceptar"]
+    });
+    await alert.present();
+  }
+
+
+
 }
