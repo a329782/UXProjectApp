@@ -104,29 +104,13 @@
     <div class="plyr-goals-container">
       <ion-label class="goleo-lbl">Goleo</ion-label>
       <div class="plyr-container">
-        <ion-label class="name-lbl">Juan Pérez</ion-label>
-        <ion-label class="num-goal-lbl">14</ion-label>
-        <ion-label class="goals-lbl">Goles</ion-label>
-      </div>
-      <div class="plyr-container">
-        <ion-label class="name-lbl">Daniel García</ion-label>
-        <ion-label class="num-goal-lbl">10</ion-label>
-        <ion-label class="goals-lbl">Goles</ion-label>
-      </div>
-      <div class="plyr-container">
-        <ion-label class="name-lbl">Alexander Martínez</ion-label>
-        <ion-label class="num-goal-lbl">8</ion-label>
-        <ion-label class="goals-lbl">Goles</ion-label>
-      </div>
-      <div class="plyr-container">
-        <ion-label class="name-lbl">Mateo López</ion-label>
-        <ion-label class="num-goal-lbl">7</ion-label>
-        <ion-label class="goals-lbl">Goles</ion-label>
-      </div>
-      <div class="plyr-container">
-        <ion-label class="name-lbl">Leonardo Rodríguez</ion-label>
-        <ion-label class="num-goal-lbl">5</ion-label>
-        <ion-label class="goals-lbl">Goles</ion-label>
+        <ion-button ion-item *ngFor="let players of playersWednesday; trackBy:trackplayersWednesday" class="player-bttn" expand="block" fill="fill" shape="default">
+          <div class="plyr-container">
+            <ion-label class="name-lbl"> {{ players.name }}</ion-label>
+            <ion-label class="num-goal-lbl"> {{ players.numGoals }}</ion-label>
+            <ion-label class="goals-lbl"> Goles </ion-label>
+          </div>
+        </ion-button>
       </div>
     </div>
 
