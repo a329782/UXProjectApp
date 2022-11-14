@@ -139,9 +139,11 @@ ion-modal{
 .plyr-container{
     margin-top: 4%;
     background-color: #3e2723;
+    //background-color: red;
     height: 38px;
     border-radius: 4px;
     display: flex;
+    align-items: center;
     ion-label{
         margin: 4%;
         color: white;
