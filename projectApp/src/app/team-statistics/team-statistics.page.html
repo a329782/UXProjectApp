@@ -19,19 +19,19 @@
     <div class="statistics-container">
 
       <div class="team-info-container">
-        <ion-label class="team-lbl">Los temerarios</ion-label>
+        <ion-label class="team-lbl">{{teams[0].name}}</ion-label>
 
         <ion-button id="open-modal" expand="block" fill="clear">
           <ion-icon name="alert-circle-outline"></ion-icon>
         </ion-button>
           
-        <ion-modal #modal trigger="open-modal">
+        <ion-modal #modalInfo trigger="open-modal">
           <ng-template>
             <ion-content class="modal-content">
               <ion-toolbar>
                 <ion-title>Información</ion-title>
                 <ion-buttons slot="end">
-                  <ion-button color="light" (click)="modal.dismiss()" class="modal-close-btn">
+                  <ion-button color="light" (click)="modalInfo.dismiss()" class="modal-close-btn">
                     Cerrar
                   </ion-button>
                 </ion-buttons>
@@ -104,13 +104,55 @@
     <div class="plyr-goals-container">
       <ion-label class="goleo-lbl">Goleo</ion-label>
       <div class="plyr-container">
-        <ion-button ion-item *ngFor="let players of playersWednesday; trackBy:trackplayersWednesday" class="player-bttn" expand="block" fill="fill" shape="default">
+
+        <ion-button ion-item *ngFor="let players of playersWednesday;" id="player-modal" class="player-bttn" expand="block" fill="fill" shape="default">
           <div class="plyr-container">
             <ion-label class="name-lbl"> {{ players.name }}</ion-label>
             <ion-label class="num-goal-lbl"> {{ players.numGoals }}</ion-label>
             <ion-label class="goals-lbl"> Goles </ion-label>
           </div>
         </ion-button>
+
+        <ion-modal #modalGoleo trigger="player-modal" class="player-modal">
+          <ng-template>
+            <ion-content [forceOverscroll]="false" class="modal-content">
+              <ion-toolbar>
+                <ion-title>{{playersWednesday[0].name}}</ion-title>
+                <ion-buttons slot="end">
+                  <ion-button (click)="modalGoleo.dismiss()" color="light" >
+                    Cerrar
+                  </ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+
+              <div *ngFor="let players of playersWednesday" class="modal-ngfor-container">
+
+                <div class="player-info-lbl">
+                  <ion-label *ngIf="players.id===0">Goles</ion-label>
+                  <ion-label *ngIf="players.id===0" class="bold-info-lbl">{{players.numGoals}}</ion-label>
+                </div>
+
+                <div class="player-info-lbl">
+                  <ion-label *ngIf="players.id===0">Tarjetas amarillas</ion-label>
+                  <ion-label *ngIf="players.id===0" class="bold-info-lbl">{{players.yellowCards}}</ion-label>
+                </div>
+
+                <div class="player-info-lbl">
+                  <ion-label *ngIf="players.id===0">Tarjetas rojas</ion-label>
+                  <ion-label *ngIf="players.id===0" class="bold-info-lbl">{{players.redCards}}</ion-label>
+                </div>
+                
+                <div class="player-info-lbl">
+                  <ion-label *ngIf="players.id===0">Partidos jugados</ion-label>
+                  <ion-label *ngIf="players.id===0" class="bold-info-lbl">{{players.gamesPlayed}}</ion-label>
+                </div>
+
+              </div>
+              
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+
       </div>
     </div>
 
