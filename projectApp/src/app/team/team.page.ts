@@ -2,12 +2,16 @@ import { alertController } from '@ionic/core';
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
+import { leagues } from '../leagues';
+
 @Component({
   selector: 'app-team',
   templateUrl: './team.page.html',
   styleUrls: ['./team.page.scss'],
 })
 export class TeamPage implements OnInit {
+
+  leagues = leagues;
 
   constructor(
     public alertController: AlertController
