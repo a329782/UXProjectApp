@@ -60,83 +60,45 @@
   
   <div class="container">
 
-    <div *ngIf="leagues[3].belongs===true" class="full-day-container">
-      <ion-label class="day-lbl">Liga {{leagues[3].leagueDay}}</ion-label>
-      <ion-button expand="block" fill="solid" shape="default" class="day-bttn" [routerLink]="['/team-statistics']">
-        <div class="liga-bttn-container">
-          <ion-label>{{leagues[3].teamName}}</ion-label>
-
-          <div class="pts-container">
-            <ion-label class="info-lbl">pts</ion-label>
-            <ion-label>{{leagues[3].pts}}</ion-label>
-          </div>
-
-          <div class="pos-container">
-            <ion-label class="info-lbl">pos</ion-label>
-            <ion-label>{{leagues[3].pos}}ro</ion-label>
-          </div>
-
-        </div>
-      </ion-button>
-    </div>
-
-    <div *ngIf="leagues[5].belongs===true" class="full-day-container">
-      <ion-label class="day-lbl">Liga {{leagues[5].leagueDay}}</ion-label>
-      <ion-button expand="block" fill="solid" shape="default" class="day-bttn" [routerLink]="['/team-statistics']">
-        <div class="liga-bttn-container">
-          <ion-label>{{leagues[5].teamName}}</ion-label>
-
-          <div class="pts-container">
-            <ion-label class="info-lbl">pts</ion-label>
-            <ion-label>{{leagues[5].pts}}</ion-label>
-          </div>
-
-          <div class="pos-container">
-            <ion-label class="info-lbl">pos</ion-label>
-            <ion-label>{{leagues[5].pos}}ro</ion-label>
-          </div>
-
-        </div>
-      </ion-button>
-    </div>
+    <ng-container *ngFor="let league of leagues">
+      <ng-container *ngIf="league.belongs===true">
+        <div class="full-day-container">
+          <ion-label class="day-lbl">Liga {{league.day}}</ion-label>
     
-    <div *ngIf="leagues[6].belongs===true" class="full-day-container">
-      <ion-label class="day-lbl">Liga {{leagues[6].leagueDay}}</ion-label>
-      <ion-button expand="block" fill="solid" shape="default" class="day-bttn" [routerLink]="['/team-statistics']">
-        <div class="liga-bttn-container">
-          <ion-label>{{leagues[6].teamName}}</ion-label>
-
-          <div class="pts-container">
-            <ion-label class="info-lbl">pts</ion-label>
-            <ion-label>{{leagues[6].pts}}</ion-label>
-          </div>
-
-          <div class="pos-container">
-            <ion-label class="info-lbl">pos</ion-label>
-            <ion-label>{{leagues[6].pos}}º</ion-label>
-          </div>
-          <!-- preguntar sobre posicion -->
+          <ion-button expand="block" fill="solid" shape="default" class="day-bttn" (click)="openTeamStatisticsPage(league.day)">
+              <div class="liga-bttn-container">
+                <ion-label>{{league.team}}</ion-label>
+      
+                <div class="pts-container">
+                  <ion-label class="info-lbl">pts</ion-label>
+                  <ion-label>{{league.pts}}</ion-label>
+                </div>
+      
+                <div class="pos-container">
+                  <ion-label class="info-lbl">pos</ion-label>
+                  <ion-label>{{league.pos}}</ion-label>
+                </div>
+      
+              </div>
+          </ion-button>
         </div>
-      </ion-button>
-    </div>
-    
-    <!-- <h2 style="color: red;">Leagues</h2>
-    <div *ngFor="let league of leagues;">
-      <h3 style="color: red"> {{league.leagueDay }}</h3>
-      <p *ngIf="league.leagueDay=='Miercoles'">{{league.teamName }}</p>
-      <p *ngIf="league.leagueDay=='Miercoles'">{{league.pos }}</p>
-    </div> -->
+      </ng-container>
+    </ng-container>
 
-    <div class="sol-pend-container">
-      <ion-label class="sol-pend-lbl">Solicitudes pendientes</ion-label>
-      <ion-label class="day-lbl">Liga Lunes</ion-label>
-      <ion-button (click)="presentSolAlert()" expand="block" fill="solid" shape="default" class="day-bttn">
-        <div class="liga-bttn-container">
-          <ion-label>Los abuelos F.C.</ion-label>
+    <ng-container *ngFor="let league of leagues">
+      <ng-container *ngIf="league.teamRequested===true">
+        <div class="sol-pend-container">
+          <ion-label class="sol-pend-lbl">Solicitudes de equipo pendientes</ion-label>
+          <ion-label class="day-lbl">Liga {{league.day}}</ion-label>
 
+          <ion-button (click)="presentSolAlert()" expand="block" fill="solid" shape="default" class="day-bttn">
+            <div class="liga-bttn-container">
+              <ion-label>{{league.team}}</ion-label>
+            </div>
+          </ion-button>
         </div>
-      </ion-button>
-    </div>
+      </ng-container>
+    </ng-container>
 
   </div>
 
