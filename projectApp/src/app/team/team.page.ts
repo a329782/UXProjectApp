@@ -1,19 +1,36 @@
-import { alertController } from '@ionic/core';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { LeaguesService } from '../leagues.service';
+import { Router, NavigationExtras } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-team',
   templateUrl: './team.page.html',
   styleUrls: ['./team.page.scss'],
 })
-export class TeamPage implements OnInit {
+export class TeamPage implements OnInit, OnDestroy {
+
+  leagueDay: string;
+  subscription: Subscription;
+
+  leagues = [];
 
   constructor(
-    public alertController: AlertController
-  ) { }
+    public alertController: AlertController, private leaguesService: LeaguesService, private router: Router) { }
+
+  openTeamStatisticsPage(leagueDay){
+    this.router.navigateByUrl('/team-statistics');
+    this.leaguesService.changeLeagueDay(leagueDay);
+  }
 
   ngOnInit() {
+    this.leagues = this.leaguesService.getLeagues();
+    this.subscription = this.leaguesService.currentLeagueDay.subscribe(leagueDay => this.leagueDay = leagueDay);
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   async presentAlert() {
@@ -64,6 +81,5 @@ export class TeamPage implements OnInit {
     await alert.present();
   }
 
-
-
+  
 }
