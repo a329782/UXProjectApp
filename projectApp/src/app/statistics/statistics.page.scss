@@ -9,6 +9,12 @@ ion-toolbar {
     .toolbar-container{
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        .season-lbl{
+            font-size: 14px;
+            opacity: 50%;
+            margin-right: 4%;
+        }
 
     }
 

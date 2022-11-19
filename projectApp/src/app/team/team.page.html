@@ -63,8 +63,10 @@
     <ng-container *ngFor="let league of leagues">
       <ng-container *ngIf="league.belongs===true">
         <div class="full-day-container">
-          <ion-label class="day-lbl">Liga {{league.day}}</ion-label>
-    
+          <div class="day-season-container">
+            <ion-label class="day-lbl">Liga {{league.day}}</ion-label>
+            <ion-label class="season-lbl">Jornada {{league.season}}</ion-label>
+          </div>
           <ion-button expand="block" fill="solid" shape="default" class="day-bttn" (click)="openTeamStatisticsPage(league.day)">
               <div class="liga-bttn-container">
                 <ion-label>{{league.team}}</ion-label>

@@ -110,11 +110,23 @@ ion-content {
     margin-top: 10%;
 }
 
-.day-lbl {
+.day-season-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 1%;
+    .season-lbl{
+        margin-right: 2%;
+    }
+}
+
+.day-lbl{
     font-size: 1rem;
     font-weight: bold;
     padding-left: 1%;
 }
+
 
 .liga-bttn-container {
     display: flex;

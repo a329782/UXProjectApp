@@ -20,7 +20,9 @@ export class TeamStatisticsPage implements OnInit, OnDestroy {
   
   ngOnInit() {
     this.leagues = this.leaguesService.getLeagues();
+
     this.subscription = this.leaguesService.currentLeagueDay.subscribe(leagueDay => this.leagueDay = leagueDay)
+
   }
 
   ngOnDestroy() {

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,9 @@ export class LeaguesService {
 
   private leagueDaySource = new BehaviorSubject('default leagueDay');
   currentLeagueDay = this.leagueDaySource.asObservable();
+
+  private statisticsDaySource = new BehaviorSubject('default statistics day');
+  currentStatisticsDay = this.statisticsDaySource.asObservable();
 
   private leagues = [
     {
@@ -60,6 +63,7 @@ export class LeaguesService {
         team: 'Los abuelos F.C.',
         teamRequested: true,
         belongs: false,
+        season: 12
     },
     {
         id: 5,
@@ -102,14 +106,91 @@ export class LeaguesService {
     }
   ];
 
+  private leagueTeams = [
+    {
+      id: 3,
+      day: 'Miercoles',
+      belongs: true,
+      season: 10,
+      teams: [
+        { id: 0, name: 'Los correcaminos', pts: 31, pos: 1},
+        { id: 1, name: 'Tacos Gera', pts: 28, pos: 2},
+        { id: 2, name: 'Los temerarios', pts: 26, pos: 3},
+        { id: 3, name: 'Caballeros', pts: 25, pos: 4},
+        { id: 4, name: 'Galacticos', pts: 25, pos: 5},
+        { id: 5, name: 'Gasolineras Carvel', pts: 21, pos: 6},
+        { id: 6, name: 'Bonus team', pts: 19, pos: 7},
+        { id: 7, name: 'Jidosha', pts: 18, pos: 8}
+      ]
+    },
+    {
+      id: 4,
+      day: 'Jueves',
+      belongs: false,
+      season: 11,
+      teams: [
+        { id: 0, name: 'Premiere', pts: 32, pos: 1},
+        { id: 1, name: 'Rivelinos F.C.', pts: 30, pos: 2},
+        { id: 2, name: 'Tio pipsa', pts: 29, pos: 3},
+        { id: 3, name: 'Matamoros', pts: 29, pos: 4},
+        { id: 4, name: 'Team papas', pts: 26, pos: 5},
+        { id: 5, name: 'La talleres', pts: 24, pos: 6},
+        { id: 6, name: 'Mariscrudos', pts: 20, pos: 7},
+        { id: 7, name: 'Flor arte', pts: 17, pos: 8}
+      ]
+    },
+    {
+      id: 5,
+      day: 'Viernes',
+      belongs: true,
+      season: 8,
+      teams: [
+        { id: 0, name: 'Los cadetes', pts: 24, pos: 1},
+        { id: 1, name: 'La PRI', pts: 23, pos: 2},
+        { id: 2, name: 'Abuelos F.C.', pts: 20, pos: 3},
+        { id: 3, name: 'Sacachispas', pts: 18, pos: 4},
+        { id: 4, name: 'Rico pollo', pts: 17, pos: 5},
+        { id: 5, name: 'Cuervos', pts: 16, pos: 6},
+        { id: 6, name: 'Chalo caps', pts: 13, pos: 7},
+        { id: 7, name: 'Balones ponchados', pts: 11, pos: 8}
+      ]
+    },
+    {
+      id: 6,
+      day: 'Sabado',
+      belongs: true,
+      season: 6,
+      teams: [
+        { id: 0, name: 'Granja miranda', pts: 31, pos: 1},
+        { id: 1, name: 'La cabañita', pts: 28, pos: 2},
+        { id: 2, name: 'Juaguares', pts: 26, pos: 3},
+        { id: 3, name: 'Perfiles del real', pts: 25, pos: 4},
+        { id: 4, name: 'Vetados', pts: 25, pos: 5},
+        { id: 5, name: 'La carreta', pts: 21, pos: 6},
+        { id: 6, name: 'Los capis', pts: 11, pos: 7},
+        { id: 7, name: 'Don Goyo', pts: 9, pos: 8}
+      ]
+    },
+
+
+  ]
+
   constructor() { }
 
   changeLeagueDay(leagueDay: string){
     this.leagueDaySource.next(leagueDay);
   }
 
+  changeStatisticsDay(statisticsDay: string){
+    this.statisticsDaySource.next(statisticsDay);
+  }
+
   getLeagues() {
     return this.leagues;
+  }
+
+  getLeagueTeams() {
+    return this.leagueTeams;
   }
 
 }
