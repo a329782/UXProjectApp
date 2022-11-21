@@ -1,9 +1,65 @@
-<ion-header>
+<ion-header mode="ios">
   <ion-toolbar>
-    <ion-title>ProfileEditMode</ion-title>
+    
+    <div class="toolbar-container">
+      <ion-buttons>
+        <ion-back-button text="Atrás" defaultHref="/tabs/profile"></ion-back-button>
+      </ion-buttons>
+      <ion-label>Mi Perfil</ion-label>
+      <ion-button fill="clear">Hecho</ion-button>
+    </div>
+
+    <div class="toolbar-line"></div>
   </ion-toolbar>
+  
 </ion-header>
 
-<ion-content>
+<ion-content [forceOverscroll]="false">
+
+  <div class="profile-container">
+
+    <ion-icon name="person-circle"></ion-icon>
+
+    <div class="login-form">
+      <form action="" class="form">
+        <div class="form-div">
+          <input type="text" class="form-input" placeholder=" ">
+          <ion-label class="form-lbl">Nombre</ion-label>
+        </div>
+
+        <div class="form-div">
+          <input type="text" class="form-input" placeholder=" ">
+          <ion-label class="form-lbl">Apellido Paterno</ion-label>
+        </div>
+
+        <div class="form-div">
+          <input type="text" class="form-input" placeholder=" ">
+          <ion-label class="form-lbl">Apellido Materno</ion-label>
+        </div>
+
+        <div class="form-div">
+          <input type="email" class="form-input" placeholder=" ">
+          <ion-label class="form-lbl">Correo electrónico</ion-label>
+        </div>
+
+        <div class="form-div">
+          <input type="tel" class="form-input" placeholder=" ">
+          <ion-label class="form-lbl">Teléfono</ion-label>
+        </div>
+
+        <div class="form-div">
+          <input type="password" class="form-input" placeholder=" ">
+          <ion-label class="form-lbl">Contraseña</ion-label>
+        </div>
+
+        <div class="form-div">
+          <input type="password" class="form-input" placeholder=" ">
+          <ion-label class="form-lbl">Confirmar Contraseña</ion-label>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
 
 </ion-content>
