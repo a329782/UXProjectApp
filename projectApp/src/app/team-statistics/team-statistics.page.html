@@ -49,6 +49,7 @@
                 <ion-label>JE. Juegos Empatados.</ion-label>
                 <ion-label>GF. Goles a Favor.</ion-label>
                 <ion-label>GC. Goles en Contra.</ion-label>
+                <ion-label>DG. Diferencia de goles.</ion-label>
                 <ion-label>PTS. Puntos.</ion-label>
                 <ion-label>POS. Posición.</ion-label>
               </div>
@@ -58,7 +59,6 @@
         </ion-modal>
 
       </div>
-
 
       <ng-container *ngFor="let league of leagues">
         <ng-container *ngIf="league.day===leagueDay">
@@ -93,6 +93,12 @@
                 <ion-label class="stats-info-lbl">GC</ion-label>
                 <ion-label class="num-lbl">{{league.gc}}</ion-label>
               </div>
+
+              <div class="info-container">
+                <ion-label class="stats-info-lbl">DG</ion-label>
+                <ion-label class="num-lbl">{{league.gf - league.gc}}</ion-label>
+              </div>
+
     
               <div class="info-container">
                 <ion-label class="stats-info-lbl">PTS</ion-label>
@@ -113,52 +119,54 @@
 
     <div class="plyr-goals-container">
       <ion-label class="goleo-lbl">Goleo</ion-label>
+
       <ng-container *ngFor="let league of leagues">
         <ng-container *ngIf="league.day===leagueDay" class="plyr-container">
   
-          <ion-button *ngFor="let player of league.players;" id="player-modal" class="player-bttn" expand="block" fill="fill" shape="default">
+          <ion-button *ngFor="let player of league.players" id="player-modal" class="player-bttn" expand="block" fill="fill" shape="default" (click)="getPlayersInfo(player.name)">
             <div class="plyr-container">
-              <ion-label class="name-lbl"> {{ player.name }}</ion-label>
+              <ion-label class="name-lbl"> {{ player.name }} </ion-label>
               <ion-label class="num-goal-lbl"> {{ player.numGoals }}</ion-label>
               <ion-label class="goals-lbl"> Goles </ion-label>
             </div>
+            
           </ion-button>
-  
-          <ion-modal #modalGoleo trigger="player-modal" class="player-modal" >
+
+          <ion-modal trigger="player-modal" class="player-modal" #modalGoleo>
             <ng-template>
               <ion-content [forceOverscroll]="false" class="modal-content">
                 <ng-container *ngIf="league.day===leagueDay">
                   <ion-toolbar>
-                    <ion-title>{{league.player.name}}</ion-title>
-                    <ion-buttons slot="end">
-                      <ion-button (click)="modalGoleo.dismiss()" color="light" >
-                        Cerrar
-                      </ion-button>
-                    </ion-buttons>
+                    <ion-title>{{playerInfo}}</ion-title>
+                    <ion-button (click)="modalGoleo.dismiss()" color="light" fill="clear" slot="end">
+                      Cerrar
+                    </ion-button>
                   </ion-toolbar>
                   
-                    
                       <div *ngFor="let player of league.players" class="modal-ngfor-container">
-        
-                        <div class="player-info-lbl">
-                          <ion-label>Goles</ion-label>
-                          <ion-label class="bold-info-lbl">{{player.numGoals}}</ion-label>
-                        </div>
-        
-                        <div class="player-info-lbl">
-                          <ion-label *ngIf="player.id===0">Tarjetas amarillas</ion-label>
-                          <ion-label *ngIf="player.id===0" class="bold-info-lbl">{{player.yellowCards}}</ion-label>
-                        </div>
-        
-                        <div class="player-info-lbl">
-                          <ion-label *ngIf="player.id===0">Tarjetas rojas</ion-label>
-                          <ion-label *ngIf="player.id===0" class="bold-info-lbl">{{player.redCards}}</ion-label>
-                        </div>
-                        
-                        <div class="player-info-lbl">
-                          <ion-label *ngIf="player.id===0">Partidos jugados</ion-label>
-                          <ion-label *ngIf="player.id===0" class="bold-info-lbl">{{player.gamesPlayed}}</ion-label>
-                        </div>
+                        <ng-container *ngIf="player.name===playerInfo">
+
+                          <div class="player-info-lbl">
+                            <ion-label>Goles</ion-label>
+                            <ion-label class="bold-info-lbl">{{player.numGoals}}</ion-label>
+                          </div>
+          
+                           <div class="player-info-lbl">
+                            <ion-label>Tarjetas amarillas</ion-label>
+                            <ion-label class="bold-info-lbl">{{player.yellowCards}}</ion-label>
+                          </div>
+          
+                          <div class="player-info-lbl">
+                            <ion-label>Tarjetas rojas</ion-label>
+                            <ion-label class="bold-info-lbl">{{player.redCards}}</ion-label>
+                          </div>
+                          
+                          <div class="player-info-lbl">
+                            <ion-label>Partidos jugados</ion-label>
+                            <ion-label class="bold-info-lbl">{{player.gamesPlayed}}</ion-label>
+                          </div> 
+
+                        </ng-container>
                       </div >
                 </ng-container>
   

@@ -13,20 +13,27 @@ export class TeamStatisticsPage implements OnInit, OnDestroy {
   leagueDay: string;
   subscription: Subscription;
 
+  playerInfo: string;
+  playerSubscription: Subscription;
+
   leagues = [];
 
   constructor(private leaguesService: LeaguesService, private router: Router, private activatedRoute: ActivatedRoute) { 
   }
   
+  getPlayersInfo(playerInfo){
+    this.leaguesService.setPlayerStatistics(playerInfo);
+  }
+
   ngOnInit() {
     this.leagues = this.leaguesService.getLeagues();
-
     this.subscription = this.leaguesService.currentLeagueDay.subscribe(leagueDay => this.leagueDay = leagueDay)
-
+    this.playerSubscription = this.leaguesService.currentPlayersScore.subscribe(playerInfo => this.playerInfo = playerInfo);
   }
 
   ngOnDestroy() {
       this.subscription.unsubscribe();
+      this.playerSubscription.unsubscribe();
   }
   
 }

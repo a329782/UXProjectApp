@@ -23,6 +23,18 @@ ion-toolbar {
         margin-left: auto;        
         --color: black;
     }
+
+    ion-badge{
+        --background: black;
+        margin-left: -36px;
+        margin-top: -28px;
+        width: 15px;
+        height: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
     ion-icon {
         font-size: 2.1rem;
     }

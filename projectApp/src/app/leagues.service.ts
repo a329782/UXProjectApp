@@ -12,6 +12,10 @@ export class LeaguesService {
   private statisticsDaySource = new BehaviorSubject('default statistics day');
   currentStatisticsDay = this.statisticsDaySource.asObservable();
 
+  private playersScoreSource = new BehaviorSubject('default player');
+  currentPlayersScore = this.playersScoreSource.asObservable();
+
+
   private leagues = [
     {
         id: 0,
@@ -184,6 +188,11 @@ export class LeaguesService {
   changeStatisticsDay(statisticsDay: string){
     this.statisticsDaySource.next(statisticsDay);
   }
+
+  setPlayerStatistics(playersInfo: string){
+    this.playersScoreSource.next(playersInfo);
+  }
+
 
   getLeagues() {
     return this.leagues;
