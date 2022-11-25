@@ -21,6 +21,7 @@ export class LoginPage implements OnInit {
       if(userName === 'admin'){
         this.router.navigateByUrl('/tabs', {replaceUrl: true});
       } else if (userName === 'user'){
+        this.router.navigateByUrl('/tabs', {replaceUrl: true});
         console.log('hola usuario');
       }
     });

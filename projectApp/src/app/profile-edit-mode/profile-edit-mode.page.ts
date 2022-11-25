@@ -1,4 +1,6 @@
+import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-profile-edit-mode',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileEditModePage implements OnInit {
 
-  constructor() { }
+  user = this.authService.getUser();
+  
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
+  
+  
 
 }
