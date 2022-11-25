@@ -31,6 +31,7 @@ ion-toolbar {
         .season-lbl{
             font-size: 14px;
             opacity: 50%;
+            margin-right: 4%;
         }
     }
 }
@@ -40,6 +41,46 @@ ion-content {
     --background: #FBFBFD;
     --color: black;
     font-family: 'Roboto', sans-serif;
+}
+
+ion-modal.edit-players-modal{
+    --height: 98%;
+    .delete-player-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.6rem;
+        margin-inline: 5%;
+        ion-button{
+            --padding-start: 0;
+            --padding-end: 0;
+            ion-icon{
+                color: red;
+                font-size: 1.5rem;
+            }
+        }
+        ion-label{
+            margin-left: 5%;
+        }
+        ion-label.name-lbl{
+            margin-left: 10%;
+        }
+    }
+    .info-title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding-top: 5%;
+        padding-bottom: 10%;
+        ion-label.no-lbl{
+            margin-left: 13%;
+        }
+        ion-label.name-lbl{
+            margin-right: 35%;
+        }
+    }
 }
 
 ion-modal{
@@ -75,8 +116,23 @@ ion-modal{
     flex-direction: column;
 }
 
+ion-button.edit-players-bttn{
+    width: 40%;
+    text-decoration: underline;
+    --background: clear;
+    color: #3e2723;
+    margin-left: 60%;
+    --background-activated: rgba(255, 255, 255, 0.1);
+}
+
 .statistics-container{
-    margin-top: 20%;
+    margin-top: 10%;
+}
+
+.liga-day-lbl{
+    opacity: .4;
+    margin-left: 1%;
+    font-size: 1.7rem;
 }
 
 .team-info-container{
@@ -111,7 +167,6 @@ ion-modal{
     width: 100%;
     height: 100%;
    .info-container{
-        //background-color: red;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -194,4 +249,5 @@ ion-modal.player-modal{
         }
     }
 }
+
 

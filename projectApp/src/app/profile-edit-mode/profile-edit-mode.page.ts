@@ -16,6 +16,8 @@ export class ProfileEditModePage implements OnInit {
   ngOnInit() {
   }
   
-  
+  logout() {
+    this.authService.logout();
+  }
 
 }

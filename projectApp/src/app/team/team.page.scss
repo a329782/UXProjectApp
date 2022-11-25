@@ -10,6 +10,7 @@ ion-toolbar {
     .toolbar-container{
         display: flex;
         align-items: center;
+        margin-right: 4%;
     }
 
     ion-label{
@@ -104,7 +105,12 @@ ion-content {
             text-decoration: underline;
         }
         padding-right: .1%;
+        --color: #3e2723;
     }
+}
+
+.join-team-alert{
+    color: red;
 }
 
 .container {

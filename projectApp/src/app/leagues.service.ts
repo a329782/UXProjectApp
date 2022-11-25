@@ -22,6 +22,7 @@ export class LeaguesService {
         day: 'Domingo',
         belongs: false,
         teamRequested: false,
+        teamCode: '8fd9s0',
         team: 'Real Mandril',
     },
     {
@@ -29,6 +30,7 @@ export class LeaguesService {
         day: 'Lunes',
         belongs: false,
         teamRequested: false,
+        teamCode: '12iodl',
         team: 'Los capis',
     },
     {
@@ -41,6 +43,7 @@ export class LeaguesService {
     {
         id: 3,
         day: 'Miercoles',
+        teamCode: 'bf23hj',
         belongs: true,
         teamRequested: false,
         team: 'Los temerarios',
@@ -58,13 +61,22 @@ export class LeaguesService {
           { id:1, name: 'Daniel García', numGoals: 10, yellowCards: 5, redCards: 2, gamesPlayed: 10 },
           { id:2, name: 'Alexander Martínez', numGoals: 8, yellowCards: 5, redCards: 2, gamesPlayed: 10 },
           { id:3, name: 'Mateo López', numGoals: 7, yellowCards: 5, redCards: 2, gamesPlayed: 10 },
-          { id:4, name: 'Leonardo Rodríguez', numGoals: 5, yellowCards: 5, redCards: 2, gamesPlayed: 10 }
+          { id:4, name: 'Leonardo Rodríguez', numGoals: 5, yellowCards: 5, redCards: 2, gamesPlayed: 10 },
+          { id:5, name: 'Ramón Reyes', numGoals: 0, yellowCards: 2, redCards: 0, gamesPlayed: 8 },
+          { id:6, name: 'Jorge de la Cruz', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 4 },
+          { id:7, name: 'Laureano Montoya', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 2 },
+          { id:8, name: 'Alvaro Soler', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 4 },
+          { id:9, name: 'Xavier Cobo', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 4 },
+          { id:10, name: 'Miguek Duque', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 4 },
+          { id:11, name: 'Octavio Andrade', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 4 },
+          { id:12, name: 'Ali Ventura', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 4 }
         ]
     },
     {
         id: 4,
         day: 'Jueves',
         team: 'Los abuelos F.C.',
+        teamCode: 'jdk231',
         teamRequested: true,
         belongs: false,
         season: 12
@@ -73,6 +85,7 @@ export class LeaguesService {
         id: 5,
         day: 'Viernes',
         belongs: true,
+        teamCode: 'kdo9d8',
         teamRequested: false,
         team: 'Los cadetes',
         season: 8,
@@ -85,11 +98,19 @@ export class LeaguesService {
         pts: 24,
         pos: 1,
         players: [
-          { id:5, name: 'Pedro Gonzalez', numGoals: 7, yellowCards: 4, redCards: 0, gamesPlayed: 8},
-          { id:6, name: 'Gabriel Hernandez', numGoals: 6, yellowCards: 6, redCards: 2, gamesPlayed: 8 },
-          { id:7, name: 'Martin Martínez', numGoals: 3, yellowCards: 1, redCards: 0, gamesPlayed: 8 },
-          { id:8, name: 'Jose Arellano', numGoals: 2, yellowCards: 3, redCards: 0, gamesPlayed: 8 },
-          { id:9, name: 'Jacobo Guerra', numGoals: 2, yellowCards: 6, redCards: 0, gamesPlayed: 8 }
+          { id:0, name: 'Pedro Gonzalez', numGoals: 7, yellowCards: 4, redCards: 0, gamesPlayed: 8},
+          { id:1, name: 'Gabriel Hernandez', numGoals: 6, yellowCards: 6, redCards: 2, gamesPlayed: 8 },
+          { id:2, name: 'Martin Martínez', numGoals: 3, yellowCards: 1, redCards: 0, gamesPlayed: 8 },
+          { id:3, name: 'Jose Arellano', numGoals: 2, yellowCards: 3, redCards: 0, gamesPlayed: 8 },
+          { id:4, name: 'Jacobo Guerra', numGoals: 2, yellowCards: 6, redCards: 0, gamesPlayed: 8 },
+          { id:5, name: 'Alejandro Santiago'},
+          { id:6, name: 'Pablo Tamayo'},
+          { id:7, name: 'Faustino Millan'},
+          { id:8, name: 'Alberto Costa'},
+          { id:9, name: 'Vidal Lopez'},
+          { id:10, name: 'Oscar Morales'},
+          { id:11, name: 'Blas Saenz'},
+          { id:12, name: 'Andres Cuevas'}
         ]
     },
     {
@@ -97,6 +118,7 @@ export class LeaguesService {
         day: 'Sabado',
         belongs: true,
         team: 'Los capis',
+        teamCode: 'ds6234',
         teamRequested: false,
         season: 6,
         jj: 6,
@@ -106,7 +128,22 @@ export class LeaguesService {
         gf: 12,
         gc: 16,
         pts: 11,
-        pos: 7
+        pos: 7,
+        players: [
+          { id:0, name: 'Pere Alvaro', numGoals: 7, yellowCards: 4, redCards: 0, gamesPlayed: 8},
+          { id:1, name: 'Samuel Sevilla', numGoals: 6, yellowCards: 6, redCards: 2, gamesPlayed: 8 },
+          { id:2, name: 'Juan Rebollo', numGoals: 3, yellowCards: 1, redCards: 0, gamesPlayed: 8 },
+          { id:3, name: 'Alexandre Pareja', numGoals: 2, yellowCards: 3, redCards: 0, gamesPlayed: 8 },
+          { id:4, name: 'Pascual Carpio', numGoals: 2, yellowCards: 6, redCards: 0, gamesPlayed: 8 },
+          { id:5, name: 'Ramon Palomares'},
+          { id:6, name: 'Luis Benitez'},
+          { id:7, name: 'Pedro Chavez'},
+          { id:8, name: 'Daniel Hinojos'},
+          { id:9, name: 'Uriel Talamantes'},
+          { id:10, name: 'Mario Garcia'},
+          { id:11, name: 'Eduardo Ramirez'},
+          { id:12, name: 'Alberto Arreola'}
+        ]
     }
   ];
 

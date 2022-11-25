@@ -1,3 +1,5 @@
+import { SharedDirectivesModule } from './../directives/shared-directives.module';
+import { HomePageRoutingModule } from './../home/home-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +15,9 @@ import { TeamStatisticsPage } from './team-statistics.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    TeamStatisticsPageRoutingModule
+    TeamStatisticsPageRoutingModule,
+    HomePageRoutingModule,
+    SharedDirectivesModule
   ],
   declarations: [TeamStatisticsPage]
 })

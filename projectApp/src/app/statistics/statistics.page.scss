@@ -63,7 +63,7 @@ ion-content {
     flex-direction: column;
     ion-button{
         --background: #3e2723;
-        --background-activated: rgba(255, 255, 255, 0.1);
+        --background-activated: none;
         height: 42px;
     }
 }

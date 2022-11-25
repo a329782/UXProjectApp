@@ -7,13 +7,19 @@ import { IonicModule } from '@ionic/angular';
 import { MatchesPageRoutingModule } from './matches-routing.module';
 
 import { MatchesPage } from './matches.page';
+import { HomePageRoutingModule } from '../home/home-routing.module';
+import { SharedDirectivesModule } from '../directives/shared-directives.module';
+
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MatchesPageRoutingModule
+    MatchesPageRoutingModule,
+    HomePageRoutingModule,
+    SharedDirectivesModule
   ],
   declarations: [MatchesPage]
 })

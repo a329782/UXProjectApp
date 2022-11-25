@@ -18,11 +18,14 @@ export class LoginPage implements OnInit {
 
   signIn(userName) {
     this.auth.signIn(userName).subscribe(user => {
-      if(userName === 'admin'){
+      if(userName === 'capitan'){
         this.router.navigateByUrl('/tabs', {replaceUrl: true});
       } else if (userName === 'user'){
         this.router.navigateByUrl('/tabs', {replaceUrl: true});
         console.log('hola usuario');
+      } else if (userName === 'arbitro'){
+        this.router.navigateByUrl('/tabs', {replaceUrl: true});
+        console.log('hola arbitro');
       }
     });
   }

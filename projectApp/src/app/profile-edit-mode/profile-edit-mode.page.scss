@@ -16,6 +16,12 @@ ion-toolbar {
         font-weight: 600;
         color: black;
     }
+    ion-button{
+        --color: #3e2723;
+    }
+    ion-back-button{
+        --color: #3e2723;
+    }
 }
 
 .toolbar-container{

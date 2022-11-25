@@ -43,13 +43,19 @@ export class AuthService {
         role: 'USER',
         permissions: ['read']
       };
-    } else if (name === 'admin') {
+    } else if (name === 'capitan') {
       userObj = {
         name: 'Alex admin',
         role: 'ADMIN',
         permissions: ['read', 'write']
       };
-    }
+    } else if (name === 'arbitro') {
+    userObj = {
+      name: 'Alex arbitro',
+      role: 'ARBITRO',
+      permissions: ['read', 'write']
+    };
+  }
 
     return of(userObj).pipe(
       tap(user => {

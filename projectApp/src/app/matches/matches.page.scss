@@ -32,6 +32,15 @@ ion-label{
     padding-top: 1rem;
 }
 
+.arbitro-bttn-container{
+    display: flex;
+    justify-content: flex-end;
+    ion-button.arbitrar-bttn{
+        --background: none;
+        --color: #3E2723;
+        --background-activated: rgba(255, 255, 255, 0.1);
+    }
+}
 .matches-container {
     display: flex;
     flex-direction: column;
@@ -39,6 +48,7 @@ ion-label{
     margin: 5%;
     gap: 2rem;
 }
+
 
 .match-container {
     background-color: #3E2723;

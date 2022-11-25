@@ -8,7 +8,16 @@
 </ion-header>
 
 <ion-content [forceOverscroll]="false">
+  <div class="arbitro-bttn-container">
+
+    <ion-button fill="solid" class="arbitrar-bttn" appDisableRole disableForRole="USER">
+      Arbitrar partido
+      <ion-icon name="remove-circle"></ion-icon>
+    </ion-button>
+  </div>
+  
   <div class="matches-container">
+    
 
     <ion-label id="header-label">Partido próximo/actual</ion-label>
     <div class="match-container">
@@ -34,7 +43,7 @@
     <div class="match-container">
       <div class="next-match-container">
         <ion-label>Liga Miercoles</ion-label>
-        <ion-label>14/07/2022</ion-label>
+        <ion-label>14/Jul   6:00p.m.</ion-label>
       </div>
 
       <div class="team-container">
@@ -51,7 +60,7 @@
     <div class="match-container">
       <div class="next-match-container">
         <ion-label>Liga Viernes</ion-label>
-        <ion-label>16/07/2022</ion-label>
+        <ion-label>16/Jul 8:00p.m.</ion-label>
       </div>
 
       <div class="team-container">
@@ -68,7 +77,7 @@
     <div class="match-container">
       <div class="next-match-container">
         <ion-label>Liga Viernes</ion-label>
-        <ion-label>23/07/2022</ion-label>
+        <ion-label>23/Jul   4:00p.m.</ion-label>
       </div>
 
       <div class="team-container">

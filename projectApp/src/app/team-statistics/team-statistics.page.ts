@@ -1,3 +1,5 @@
+import { AlertController } from '@ionic/angular';
+import { AuthService } from './../auth.service';
 import { Subscription } from 'rxjs';
 import { LeaguesService } from './../leagues.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
@@ -9,7 +11,8 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./team-statistics.page.scss'],
 })
 export class TeamStatisticsPage implements OnInit, OnDestroy {
-  
+  user = this.authService.getUser();
+
   leagueDay: string;
   subscription: Subscription;
 
@@ -18,7 +21,30 @@ export class TeamStatisticsPage implements OnInit, OnDestroy {
 
   leagues = [];
 
-  constructor(private leaguesService: LeaguesService, private router: Router, private activatedRoute: ActivatedRoute) { 
+  constructor(private leaguesService: LeaguesService, private router: Router, private activatedRoute: ActivatedRoute, private authService: AuthService, private alertController: AlertController) { 
+  }
+
+  async presentAlertConfirm() {
+    const alert = await this.alertController.create({
+      header: "Borrar jugador",
+      cssClass: 'join-team-alert',
+      message: "¿Desea eliminar al jugador?",
+      buttons: [
+        {
+          text: 'Cancelar',
+          handler: data => {
+            console.log('Acción cancelada.');
+          }
+        },
+        {
+          text: 'Confirmar',
+          handler: data => {
+            console.log('Jugador eliminado.');
+          }
+        }
+      ]
+    });
+    await alert.present()
   }
   
   getPlayersInfo(playerInfo){
