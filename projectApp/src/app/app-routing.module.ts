@@ -24,7 +24,10 @@ const routes: Routes = [
   },
   {
     path: 'profile-edit-mode',
-    loadChildren: () => import('./profile-edit-mode/profile-edit-mode.module').then( m => m.ProfileEditModePageModule)
+    loadChildren: () => import('./profile-edit-mode/profile-edit-mode.module').then( m => m.ProfileEditModePageModule),
+    data: {
+      role: 'ADMIN'
+    }
   },
   {
     path: 'team-statistics',

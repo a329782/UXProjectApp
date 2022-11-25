@@ -13,12 +13,12 @@
       <ion-text id="txt-login">Iniciar sesión</ion-text>
       
       <div class="text-boxes">
-        <ion-input placeholder="Correo electrónico" id="txt-area-email" type="email"> <ion-icon name="person-outline"></ion-icon></ion-input>
+        <ion-input placeholder="Correo electrónico" id="txt-area-email" type="email" [(ngModel)]="myAuth" ><ion-icon name="person-outline"></ion-icon></ion-input>
 
         <ion-input placeholder="Contraseña" id="txt-area-password" type="password"><ion-icon name="lock-closed-outline"></ion-icon></ion-input>
       </div>
 
-      <ion-button id="bttn-login" [routerLink]="['/tabs']">Iniciar Sesion</ion-button>
+      <ion-button id="bttn-login" (click)="signIn(myAuth)">Iniciar Sesion</ion-button>
 
     </div>
 
