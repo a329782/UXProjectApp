@@ -216,7 +216,49 @@ export class LeaguesService {
 
   ]
 
+
   constructor() { }
+  
+  private currentMatch=[
+    {
+      teamA: 'Los cadetes',
+      playersA: [
+        { id:0, name: 'Gonzalez Pedro', numGoals: 7, yellowCards: 4, redCards: 0, gamesPlayed: 8, isHere: 'si'},
+        { id:1, name: 'Hernandez Gabriel', numGoals: 6, yellowCards: 6, redCards: 2, gamesPlayed: 8, isHere: 'si' },
+        { id:2, name: 'Martínez Martin', numGoals: 3, yellowCards: 1, redCards: 0, gamesPlayed: 8, isHere: 'no' },
+        { id:3, name: 'Arellano Jose', numGoals: 2, yellowCards: 3, redCards: 0, gamesPlayed: 8, isHere: 'si' },
+        { id:4, name: 'Guerra Jacobo', numGoals: 2, yellowCards: 6, redCards: 0, gamesPlayed: 8, isHere: 'si' },
+        { id:5, name: 'Santiago Alejandro', numGoals: 2, yellowCards: 6, redCards: 0, gamesPlayed: 8, isHere: 'si' },
+        { id:6, name: 'Tamayo Pablo', numGoals: 2, yellowCards: 6, redCards: 0, gamesPlayed: 8, isHere: 'si' },
+        { id:7, name: 'Millan Faustino', numGoals: 2, yellowCards: 6, redCards: 0, gamesPlayed: 8, isHere: 'no' },
+        { id:8, name: 'Costa Alberto', numGoals: 2, yellowCards: 6, redCards: 0, gamesPlayed: 8, isHere: 'si' },
+        { id:9, name: 'Lopez Vidal', numGoals: 2, yellowCards: 6, redCards: 0, gamesPlayed: 8, isHere: 'si' },
+        { id:10, name: 'Morales Oscar', numGoals: 2, yellowCards: 6, redCards: 0, gamesPlayed: 8, isHere: 'si' },
+        { id:11, name: 'Saenz Blas', numGoals: 2, yellowCards: 6, redCards: 0, gamesPlayed: 8, isHere: 'no' },
+        { id:12, name: 'Cuevas Andres', numGoals: 2, yellowCards: 6, redCards: 0, gamesPlayed: 8, isHere: 'si' }
+      ],
+      teamB: 'Los temerarios',
+      playersB: [
+        { id:0, name: 'Pérez Juan', numGoals: 14, yellowCards: 5, redCards: 2, gamesPlayed: 10, isHere: 'si' },
+        { id:1, name: 'García Daniel', numGoals: 10, yellowCards: 5, redCards: 2, gamesPlayed: 10, isHere: 'si' },
+        { id:2, name: 'Martínez Alexander', numGoals: 8, yellowCards: 5, redCards: 2, gamesPlayed: 10, isHere: 'si' },
+        { id:3, name: 'López Mateo', numGoals: 7, yellowCards: 5, redCards: 2, gamesPlayed: 10, isHere: 'si' },
+        { id:4, name: 'Rodríguez Leonardo', numGoals: 5, yellowCards: 5, redCards: 2, gamesPlayed: 10, isHere: 'no' },
+        { id:5, name: 'Reyes Ramón', numGoals: 0, yellowCards: 2, redCards: 0, gamesPlayed: 8, isHere: 'si' },
+        { id:6, name: 'De la Cruz Jorge', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 4, isHere: 'si' },
+        { id:7, name: 'Montoya Laureano', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 2, isHere: 'si' },
+        { id:8, name: 'Soler Alvaro', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 4, isHere: 'no' },
+        { id:9, name: 'Cobo Xavier', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 4, isHere: 'si' },
+        { id:10, name: 'Duque Miguel', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 4, isHere: 'no' },
+        { id:11, name: 'Andrade Octavio', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 4, isHere: 'si' },
+        { id:12, name: 'Ventura Ali', numGoals: 0, yellowCards: 0, redCards: 0, gamesPlayed: 4, isHere: 'no' }
+      ]
+    }
+  ]
+
+  getCurrentMatch(){
+    return this.currentMatch;
+  }
 
   changeLeagueDay(leagueDay: string){
     this.leagueDaySource.next(leagueDay);

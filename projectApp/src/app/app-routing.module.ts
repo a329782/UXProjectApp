@@ -32,6 +32,10 @@ const routes: Routes = [
   {
     path: 'team-statistics',
     loadChildren: () => import('./team-statistics/team-statistics.module').then( m => m.TeamStatisticsPageModule)
+  },
+  {
+    path: 'ingame-arbitro',
+    loadChildren: () => import('./ingame-arbitro/ingame-arbitro.module').then( m => m.IngameArbitroPageModule)
   }
 ];
 

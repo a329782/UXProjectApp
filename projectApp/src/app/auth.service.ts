@@ -69,6 +69,10 @@ export class AuthService {
     return this.currentUser.asObservable();
   }
 
+  getLoggedInUser() {
+    return this.currentUser.value;
+  }
+
   async logout() {
     await Preferences.remove({ key: TOKEN_KEY });
     this.currentUser.next(false);

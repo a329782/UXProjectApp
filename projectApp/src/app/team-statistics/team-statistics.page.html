@@ -19,14 +19,14 @@
 
 <ion-content forceOverscroll="false">
   <div class="container">
-    <div class="code-bttn-container">
+    <div class="code-bttn-container" *ngIf="user.role==='ADMIN'">
 
       <ng-container *ngFor="let league of leagues">
         <ng-container *ngIf="leagueDay===league.day">
-          <ion-label style="opacity: .4;" appDisableRole disableForRole="USER">Código de equipo: {{league.teamCode}}</ion-label>
+          <ion-label style="opacity: .4;">Código de equipo: {{league.teamCode}}</ion-label>
         </ng-container>
       </ng-container>
-      <ion-button id="edit-players-modal" class="edit-players-bttn" appDisableRole disableForRole="USER">Editar jugadores</ion-button>
+      <ion-button id="edit-players-modal" class="edit-players-bttn">Editar jugadores</ion-button>
     </div>
     <div class="statistics-container">
       <ng-container *ngFor="let league of leagues">

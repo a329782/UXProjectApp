@@ -1,0 +1,167 @@
+ion-toolbar {
+    display: flex;
+    height: 97px;
+    --background: #F9C700;
+    --border-color: black;
+        ion-label{
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+        }
+        .match-container {
+            width: 100%;
+            height: 6rem;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            .vs-time{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+            .team-container{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 100%;
+                ion-label{
+                    font-size: 1.3rem;
+                }
+                .score-lbl{
+                    font-size: 2.4rem;
+                }
+            }
+            
+            .team-a-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                row-gap: 20%;
+                align-items: center;
+                height: 100%;
+                margin: 2%;
+            }
+            
+            .team-b-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                row-gap: 20%;
+                align-items: center;
+                margin: 2%;
+                height: 100%;
+            }
+        }
+}
+
+ion-content{
+    font-family: 'Roboto', sans-serif;
+    --background: #FBFBFD;
+}
+
+ion-button.img-bttn{
+    height: 89px;
+    --width: 80px;
+    --padding-start: 0px;
+    --padding-end: 0px;
+    --background: clear;
+    --background-activated: rgba(255, 255, 255, 0.1);
+}
+
+ion-modal.match-modal{
+    --width: 80%;
+    --height: 70%;
+    --border-radius: 16px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    align-items: center;
+    ion-toolbar{
+        height: 50px;
+        ion-title{
+            font-size: 1rem;
+        }
+    }
+    ion-content{
+        --background: #FBFBFD;
+        font-family: 'Roboto', sans-serif;
+        .player-container{
+            display: flex;
+            flex-direction: column;
+            font-size: 1.6rem;
+            margin-inline: 4%;
+            ion-button{
+                --background: none;
+                --border-color: rgba(0, 0, 0, .4);
+                --border-style: solid;
+                --border-radius: 0px;
+                --border-width: 0px 0px 1px 0px;
+                --background-activated: rgba(0, 0, 0, 0.1);
+                .bttn-container{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    padding-left: 17%;
+                    ion-label.name-lbl{
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                        color: #3E2723;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.container{
+    height: 80vh;
+    display: flex;
+    .left-team{
+        display: flex;
+        flex-direction: column;
+        width: 33vw;
+        justify-content: space-between;
+    }
+    
+    .info-lbl{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33vw;
+        justify-content: space-around;
+        ion-label{
+            opacity: .4;
+            font-size: 1.1rem;
+        }
+        ion-label.faltas-lbl{
+            font-size: 1.5rem;
+            opacity: 1;
+        }
+    }
+    
+    .right-team{
+        display: flex;
+        flex-direction: column;
+        width: 33vw;
+        justify-content: space-between;
+    }
+}
+
+.endgame-container{
+    display: flex;
+    justify-content: center;
+}
+ion-button.endgame-bttn{
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.9);
+    width: 50%;
+    --background: clear;
+    font-weight: bolder;
+    --color: #3E2723;
+    text-decoration: underline;
+    --background-activated: rgba(255, 255, 255, 0.1);
+}
+

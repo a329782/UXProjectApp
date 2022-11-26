@@ -8,9 +8,9 @@
 </ion-header>
 
 <ion-content [forceOverscroll]="false">
-  <div class="arbitro-bttn-container">
+  <div class="arbitro-bttn-container" *ngIf="(user.role==='ARBITRO')">
 
-    <ion-button fill="solid" class="arbitrar-bttn" appDisableRole disableForRole="USER">
+    <ion-button fill="solid" class="arbitrar-bttn" (click)="presentArbitroAlert()">
       Arbitrar partido
       <ion-icon name="remove-circle"></ion-icon>
     </ion-button>

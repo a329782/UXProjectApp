@@ -11,7 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./team-statistics.page.scss'],
 })
 export class TeamStatisticsPage implements OnInit, OnDestroy {
-  user = this.authService.getUser();
+  user = this.authService.getLoggedInUser();
 
   leagueDay: string;
   subscription: Subscription;

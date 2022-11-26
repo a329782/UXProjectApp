@@ -1,0 +1,439 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    
+    <div class="match-container">
+
+      <div class="team-container">
+        <div class="team-a-container">
+
+          <ion-label>Correcaminos</ion-label>
+          <ion-label class="score-lbl">{{scoreA}}</ion-label>
+
+        </div>
+        <div class="vs-time">
+          <ion-label>VS</ion-label>
+        </div>
+        <div class="team-b-container">
+          <ion-label>Cadetes</ion-label>
+          <ion-label class="score-lbl">{{scoreB}}</ion-label>
+        </div>
+      </div>
+
+    </div>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [forceOverscroll]="false">
+
+  <div class="container">
+
+    <div class="left-team">
+      <ion-button class="img-bttn" id="goal-modal" (click)="updateScore('teamA')">
+        <ion-img src="assets/img/goalIMG.png" alt="goal"></ion-img>
+      </ion-button>
+
+      <ion-button class="img-bttn" id="yellowCard-modal" (click)="updateFoul('teamA')">
+        <ion-img src="assets/img/yellowCard.png" alt="yellowCard"></ion-img>
+      </ion-button>
+
+      <ion-button class="img-bttn" id="redCard-modal" (click)="updateFoul('teamA')">
+        <ion-img src="assets/img/redCard.png" alt="redCard"></ion-img>
+      </ion-button>
+
+      <ion-button class="img-bttn" id="blueCard-modal" (click)="updateFoul('teamA')">
+        <ion-img src="assets/img/blueCard.png" alt="blueCard"></ion-img>
+      </ion-button>
+
+      <ion-button class="img-bttn" id="foul-modal" (click)="updateFoul('teamA')">
+        <ion-img src="assets/img/pngWhistle.png" alt="whistle"></ion-img>
+      </ion-button>
+
+
+        <ng-container *ngIf="teamA==='teamA'">
+            <ion-modal #modalInfo trigger="goal-modal" class="match-modal">
+              <ng-template>
+                <ion-toolbar>
+                  <ion-buttons slot="secondary">
+                    <ion-button color="light" (click)="cancelGoal('teamA')" class="modal-close-btn">
+                      Cancelar
+                    </ion-button>
+                  </ion-buttons>
+                  <ion-title>Jugadores</ion-title>
+                  
+                </ion-toolbar>
+
+                <ion-content class="modal-content">
+                  <ng-container *ngFor="let team of teams">
+                    <ng-container *ngFor="let player of team.playersA">
+                      <ng-container *ngIf="player.isHere==='si'">
+                        <div class="player-container">
+
+                          <ion-button expand="block" fill="solid" shape="round" (click)="confirmGoalAlert(player.name)">
+                            <div class="bttn-container">
+
+                              <ion-label class="name-lbl">{{player.name}}</ion-label>
+                            </div>
+                          </ion-button>
+                          <div class="bottom-line"></div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                  </ng-container>
+                  
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+
+            <ion-modal #modalInfo trigger="yellowCard-modal" class="match-modal">
+              <ng-template>
+                <ion-toolbar>
+                  <ion-buttons slot="secondary">
+                    <ion-button color="light" (click)="cancelFoul('teamA')" class="modal-close-btn">
+                      Cancelar
+                    </ion-button>
+                  </ion-buttons>
+                  <ion-title>Jugadores</ion-title>
+                  
+                </ion-toolbar>
+
+                <ion-content class="modal-content">
+                  <ng-container *ngFor="let team of teams">
+                    <ng-container *ngFor="let player of team.playersA">
+                      <ng-container *ngIf="player.isHere==='si'">
+                        <div class="player-container">
+
+                          <ion-button expand="block" fill="solid" shape="round" (click)="confirmFoulAlert(player.name)">
+                            <div class="bttn-container">
+
+                              <ion-label class="name-lbl">{{player.name}}</ion-label>
+                            </div>
+                          </ion-button>
+                          <div class="bottom-line"></div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                  </ng-container>
+                  
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+
+            <ion-modal #modalInfo trigger="redCard-modal" class="match-modal">
+              <ng-template>
+                <ion-toolbar>
+                  <ion-buttons slot="secondary">
+                    <ion-button color="light" (click)="cancelFoul('teamA')" class="modal-close-btn">
+                      Cancelar
+                    </ion-button>
+                  </ion-buttons>
+                  <ion-title>Jugadores</ion-title>
+                  
+                </ion-toolbar>
+
+                <ion-content class="modal-content">
+                  <ng-container *ngFor="let team of teams">
+                    <ng-container *ngFor="let player of team.playersA">
+                      <ng-container *ngIf="player.isHere==='si'">
+                        <div class="player-container">
+
+                          <ion-button expand="block" fill="solid" shape="round" (click)="confirmFoulAlert(player.name)">
+                            <div class="bttn-container">
+
+                              <ion-label class="name-lbl">{{player.name}}</ion-label>
+                            </div>
+                          </ion-button>
+                          <div class="bottom-line"></div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                  </ng-container>
+                  
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+
+            <ion-modal #modalInfo trigger="blueCard-modal" class="match-modal">
+              <ng-template>
+                <ion-toolbar>
+                  <ion-buttons slot="secondary">
+                    <ion-button color="light" (click)="cancelFoul('teamA')" class="modal-close-btn">
+                      Cancelar
+                    </ion-button>
+                  </ion-buttons>
+                  <ion-title>Jugadores</ion-title>
+                  
+                </ion-toolbar>
+
+                <ion-content class="modal-content">
+                  <ng-container *ngFor="let team of teams">
+                    <ng-container *ngFor="let player of team.playersA">
+                      <ng-container *ngIf="player.isHere==='si'">
+                        <div class="player-container">
+
+                          <ion-button expand="block" fill="solid" shape="round" (click)="confirmFoulAlert(player.name)">
+                            <div class="bttn-container">
+
+                              <ion-label class="name-lbl">{{player.name}}</ion-label>
+                            </div>
+                          </ion-button>
+                          <div class="bottom-line"></div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                  </ng-container>
+                  
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+
+            <ion-modal #modalInfo trigger="foul-modal" class="match-modal">
+              <ng-template>
+                <ion-toolbar>
+                  <ion-buttons slot="secondary">
+                    <ion-button color="light" (click)="cancelFoul('teamA')" class="modal-close-btn">
+                      Cancelar
+                    </ion-button>
+                  </ion-buttons>
+                  <ion-title>Jugadores</ion-title>
+                  
+                </ion-toolbar>
+
+                <ion-content class="modal-content">
+                  <ng-container *ngFor="let team of teams">
+                    <ng-container *ngFor="let player of team.playersA">
+                      <ng-container *ngIf="player.isHere==='si'">
+                        <div class="player-container">
+
+                          <ion-button expand="block" fill="solid" shape="round" (click)="confirmFoulAlert(player.name)">
+                            <div class="bttn-container">
+
+                              <ion-label class="name-lbl">{{player.name}}</ion-label>
+                            </div>
+                          </ion-button>
+                          <div class="bottom-line"></div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                  </ng-container>
+                  
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+
+        </ng-container>
+
+    </div>
+
+    <div class="info-lbl">
+      <ion-label>Gol</ion-label>
+      <ion-label>Tarjeta Amarilla</ion-label>
+      <ion-label>Tarjeta Roja</ion-label>
+      <ion-label>Tarjeta Azul</ion-label>
+      <ion-label class="faltas-lbl">{{faltasA}} Faltas {{faltasB}}</ion-label>
+
+    </div>
+    <div class="left-team">
+      <ion-button class="img-bttn" id="goalB-modal" (click)="updateScore('teamB')">
+        <ion-img src="assets/img/goalIMG.png" alt="goal"></ion-img>
+      </ion-button>
+
+      <ion-button class="img-bttn" id="yellowCardB-modal" (click)="updateFoul('teamB')">
+        <ion-img src="assets/img/yellowCard.png" alt="yellowCard"></ion-img>
+      </ion-button>
+
+      <ion-button class="img-bttn" id="redCardB-modal" (click)="updateFoul('teamB')">
+        <ion-img src="assets/img/redCard.png" alt="redCard"></ion-img>
+      </ion-button>
+
+      <ion-button class="img-bttn" id="blueCardB-modal" (click)="updateFoul('teamB')">
+        <ion-img src="assets/img/blueCard.png" alt="blueCard"></ion-img>
+      </ion-button>
+
+      <ion-button class="img-bttn" id="foulB-modal" (click)="updateFoul('teamB')">
+        <ion-img src="assets/img/pngWhistle.png" alt="whistle"></ion-img>
+      </ion-button>
+
+        <ng-container *ngIf="teamB==='teamB'">
+            <ion-modal #modalInfo trigger="goalB-modal" class="match-modal">
+              <ng-template>
+                <ion-toolbar>
+                  <ion-buttons slot="secondary">
+                    <ion-button color="light" (click)="cancelGoal('teamB')" class="modal-close-btn">
+                      Cancelar
+                    </ion-button>
+                  </ion-buttons>
+                  <ion-title>Jugadores</ion-title>
+                  
+                </ion-toolbar>
+
+                <ion-content class="modal-content">
+                  <ng-container *ngFor="let team of teams">
+                    <ng-container *ngFor="let player of team.playersB">
+                      <ng-container *ngIf="player.isHere==='si'">
+                        <div class="player-container">
+
+                          <ion-button expand="block" fill="solid" shape="round" (click)="confirmGoalAlert(player.name)">
+                            <div class="bttn-container">
+
+                              <ion-label class="name-lbl">{{player.name}}</ion-label>
+                            </div>
+                          </ion-button>
+                          <div class="bottom-line"></div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                  </ng-container>
+                  
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+
+            <ion-modal #modalInfo trigger="yellowCardB-modal" class="match-modal">
+              <ng-template>
+                <ion-toolbar>
+                  <ion-buttons slot="secondary">
+                    <ion-button color="light" (click)="cancelFoul('teamB')" class="modal-close-btn">
+                      Cancelar
+                    </ion-button>
+                  </ion-buttons>
+                  <ion-title>Jugadores</ion-title>
+                  
+                </ion-toolbar>
+
+                <ion-content class="modal-content">
+                  <ng-container *ngFor="let team of teams">
+                    <ng-container *ngFor="let player of team.playersB">
+                      <ng-container *ngIf="player.isHere==='si'">
+                        <div class="player-container">
+
+                          <ion-button expand="block" fill="solid" shape="round" (click)="confirmFoulAlert(player.name)">
+                            <div class="bttn-container">
+
+                              <ion-label class="name-lbl">{{player.name}}</ion-label>
+                            </div>
+                          </ion-button>
+                          <div class="bottom-line"></div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                  </ng-container>
+                  
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+
+            <ion-modal #modalInfo trigger="redCardB-modal" class="match-modal">
+              <ng-template>
+                <ion-toolbar>
+                  <ion-buttons slot="secondary">
+                    <ion-button color="light" (click)="cancelFoul('teamB')" class="modal-close-btn">
+                      Cancelar
+                    </ion-button>
+                  </ion-buttons>
+                  <ion-title>Jugadores</ion-title>
+                  
+                </ion-toolbar>
+
+                <ion-content class="modal-content">
+                  <ng-container *ngFor="let team of teams">
+                    <ng-container *ngFor="let player of team.playersB">
+                      <ng-container *ngIf="player.isHere==='si'">
+                        <div class="player-container">
+
+                          <ion-button expand="block" fill="solid" shape="round" (click)="confirmFoulAlert(player.name)">
+                            <div class="bttn-container">
+
+                              <ion-label class="name-lbl">{{player.name}}</ion-label>
+                            </div>
+                          </ion-button>
+                          <div class="bottom-line"></div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                  </ng-container>
+                  
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+
+            <ion-modal #modalInfo trigger="blueCardB-modal" class="match-modal">
+              <ng-template>
+                <ion-toolbar>
+                  <ion-buttons slot="secondary">
+                    <ion-button color="light" (click)="cancelFoul('teamB')" class="modal-close-btn">
+                      Cancelar
+                    </ion-button>
+                  </ion-buttons>
+                  <ion-title>Jugadores</ion-title>
+                  
+                </ion-toolbar>
+
+                <ion-content class="modal-content">
+                  <ng-container *ngFor="let team of teams">
+                    <ng-container *ngFor="let player of team.playersB">
+                      <ng-container *ngIf="player.isHere==='si'">
+                        <div class="player-container">
+
+                          <ion-button expand="block" fill="solid" shape="round" (click)="confirmFoulAlert(player.name)">
+                            <div class="bttn-container">
+
+                              <ion-label class="name-lbl">{{player.name}}</ion-label>
+                            </div>
+                          </ion-button>
+                          <div class="bottom-line"></div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                  </ng-container>
+                  
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+
+            <ion-modal #modalInfo trigger="foulB-modal" class="match-modal">
+              <ng-template>
+                <ion-toolbar>
+                  <ion-buttons slot="secondary">
+                    <ion-button color="light" (click)="cancelFoul('teamB')" class="modal-close-btn">
+                      Cancelar
+                    </ion-button>
+                  </ion-buttons>
+                  <ion-title>Jugadores</ion-title>
+                  
+                </ion-toolbar>
+
+                <ion-content class="modal-content">
+                  <ng-container *ngFor="let team of teams">
+                    <ng-container *ngFor="let player of team.playersB">
+                      <ng-container *ngIf="player.isHere==='si'">
+                        <div class="player-container">
+
+                          <ion-button expand="block" fill="solid" shape="round" (click)="confirmFoulAlert(player.name)">
+                            <div class="bttn-container">
+
+                              <ion-label class="name-lbl">{{player.name}}</ion-label>
+                            </div>
+                          </ion-button>
+                          <div class="bottom-line"></div>
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                  </ng-container>
+                  
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+
+        </ng-container>
+
+    </div>
+  </div>
+  <div class="endgame-container">
+
+    <ion-button expand="block" fill="solid" shape="round" class="endgame-bttn" (click)="endgameAlert()">
+      Finalizar Partido
+    </ion-button>
+  </div>
+
+</ion-content>
