@@ -17,7 +17,7 @@
 
   <div class="item-container">
 
-    <ion-item>
+    <ion-item lines="none">
       <ion-select placeholder="Cambiar liga" interface="popover" [(ngModel)]="statisticsDay">
         <ng-container *ngFor="let leagueDay of leagueTeams">
           <ng-container *ngIf="leagueDay.belongs===true">
