@@ -47,80 +47,41 @@ ion-toolbar {
     }
 }
 
-.login-form{
+.item-container{
+    background-color: #FBFBFD;
+    width: 360px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: auto;
+    ion-item{
+        --background: #FBFBFD;
+        --padding-start: 5px;
+        --padding-end: 5px;
+        width: 78vw;
+        --min-height: 9.7vh;
+        ion-input{
+            border-radius: 8px;
+            background-color: none;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #DADCE0;;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 280px;
+            height: 60px;
+            --padding-start: 1rem;
+            --color: black;
+        }
+        ion-label{
+            position: absolute;
+            left: 1rem;
+            top: -8px;
+            z-index: 4;
+            background-color: #FBFBFD;
+            padding-left: .5rem;
+            padding-right: .2rem;
+            color: rgba(0, 0, 0, 0.4);
+        }
+    }
 }
-
-.form{
-    width: 90%;
-    padding: 4rem 2rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-
-    ion-label{
-        font-size: 1rem;
-        color: #80868B;
-    }
-
-    .form-title{
-        font-weight: 400;
-        margin-bottom: 3rem;
-    }
-    
-    .form-div{
-        position: relative;
-        height: 48px;
-        margin-bottom: 1.5rem;
-    }
-    
-    .form-input{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 270px;
-        height: 100%;
-        border: 1px solid #DADCE0;
-        border-radius: .5rem;
-        outline: none;
-        padding: 1rem;
-        background: none;
-        z-index: 1;
-    }
-    
-    .form-lbl{
-        position: absolute;
-        left: 1rem;
-        top: 1rem;
-        padding: 0 .25rem;
-        background-color: #FBFBFD;
-        transition: .3s;
-    }
-
-}
-
-//move up
-.form-input:focus + .form-lbl{
-    top: -.5rem;
-    left: .8rem;
-    color: #1A73E8;
-    font-size: .75rem;
-    font-weight: 500;
-    z-index: 10;
-}
-
-//focus sticky top label
-.form-input:not(:placeholder-shown).form-input:not(:focus)+ .form-lbl{
-    top: -.5rem;
-    left: .8rem;
-    z-index: 10;
-    font-size: .75rem;
-    font-weight: 500;
-}
-
-
 

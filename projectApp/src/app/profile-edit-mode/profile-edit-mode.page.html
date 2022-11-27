@@ -6,7 +6,7 @@
         <ion-back-button text="Atrás" defaultHref="/tabs/profile"></ion-back-button>
       </ion-buttons>
       <ion-label>Mi Perfil</ion-label>
-      <ion-button fill="clear">Hecho</ion-button>
+      <ion-button fill="clear" (click)="newName()">Hecho</ion-button>
     </div>
 
     <div class="toolbar-line"></div>
@@ -20,45 +20,51 @@
 
     <ion-icon name="person-circle"></ion-icon>
 
-    <div class="login-form">
-      <form action="" class="form">
-        <div class="form-div">
-          <input type="text" class="form-input" placeholder=" ">
-          <ion-label class="form-lbl">Nombre</ion-label>
-        </div>
+    <div class="items-container">
 
-        <div class="form-div">
-          <input type="text" class="form-input" placeholder=" ">
-          <ion-label class="form-lbl">Apellido Paterno</ion-label>
-        </div>
-
-        <div class="form-div">
-          <input type="text" class="form-input" placeholder=" ">
-          <ion-label class="form-lbl">Apellido Materno</ion-label>
-        </div>
-
-        <div class="form-div">
-          <input type="email" class="form-input" placeholder=" ">
-          <ion-label class="form-lbl">Correo electrónico</ion-label>
-        </div>
-
-        <div class="form-div">
-          <input type="tel" class="form-input" placeholder=" ">
-          <ion-label class="form-lbl">Teléfono</ion-label>
-        </div>
-
-        <div class="form-div">
-          <input type="password" class="form-input" placeholder=" ">
-          <ion-label class="form-lbl">Contraseña</ion-label>
-        </div>
-
-        <div class="form-div">
-          <input type="password" class="form-input" placeholder=" ">
-          <ion-label class="form-lbl">Confirmar Contraseña</ion-label>
-        </div>
-
-      </form>
-    </div>
+      <div class="item-container">
+        <ion-item lines="none">
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input type="text" [(ngModel)]="usuarioName"></ion-input>
+        </ion-item>
+      </div>
+      <div class="item-container">
+        <ion-item lines="none">
+          <ion-label position="floating" class="item-label" >Apellido Paterno</ion-label>
+          <ion-input type="text"[(ngModel)]="usuarioPaterno"></ion-input>
+        </ion-item>
+      </div>
+      <!-- <div class="item-container">
+        <ion-item lines="none">
+          <ion-label position="floating">Apellido Materno</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </div> -->
+      <div class="item-container">
+        <ion-item lines="none">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" [(ngModel)]="usuarioEmail"></ion-input>
+        </ion-item>
+      </div>
+      <div class="item-container">
+        <ion-item lines="none">
+          <ion-label position="floating">Teléfono</ion-label>
+          <ion-input type="phone-number" [(ngModel)]="usuarioPhone"></ion-input>
+        </ion-item>
+      </div>
+      <div class="item-container">
+        <ion-item lines="none">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="usuarioPassword"></ion-input>
+        </ion-item>
+      </div>
+      <div class="item-container">
+        <ion-item lines="none">
+          <ion-label position="floating">Confirmar Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="confPassword"></ion-input>
+        </ion-item>
+      </div>
+  </div>
 
     <ion-button (click)="logout()" expand="block" fill="Solid" shape="round" class="logout-bttn" style="--color: red;">
       Cerrar Sesion

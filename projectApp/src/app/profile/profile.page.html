@@ -14,22 +14,25 @@
 </ion-header>
 
 <ion-content [forceOverscroll]="false">
-
   <div class="profile-container">
 
     <ion-icon name="person-circle"></ion-icon>
 
-    
-    <ion-label id="name">Juan Perez</ion-label>
+    <ion-label id="name">{{usuario}} {{paterno}}</ion-label>
     
     <div class="email-container">
       <ion-text>Correo: </ion-text>
-      <ion-label id="email">juanfernando_perez@hotmail.com</ion-label>
+      <ion-label id="email">{{email}}</ion-label>
     </div>
     
     <div class="phone-container">
-      <ion-text>Telefono: </ion-text>
-      <ion-label id="phone-number">614-423-4231</ion-label>
+      <ion-text>Teléfono: </ion-text>
+      <ion-label id="phone-number">{{phone}}</ion-label> 
+    </div>
+    
+    <div class="phone-container">
+      <ion-text>Contraseña: </ion-text>
+      <ion-label id="phone-number">{{password}}</ion-label> 
     </div>
 
   </div>
