@@ -1,0 +1,32 @@
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Cancelar" defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+<ion-content forceOverscroll="false">
+  <div class="container">
+
+    <div class="login-container">
+      <ion-thumbnail>
+      </ion-thumbnail>
+      
+      <ion-text id="txt-login">Escribe tu correo electrónico</ion-text>
+
+      <div class="items-container">
+        <div class="item-container">
+          <ion-item lines="none">
+            <ion-icon name="person-outline"></ion-icon>
+            <ion-label position="floating">Correo electrónico</ion-label>
+            <ion-input type="email"></ion-input>
+          </ion-item>
+        </div>
+      </div>
+
+      <ion-button id="bttn-login" [routerLink]="['/email-code']">Confirmar</ion-button>
+
+    </div>
+
+  </div>
+</ion-content>

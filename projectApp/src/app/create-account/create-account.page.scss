@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&display=swap');
-
 ion-content {
     --ion-background-color: #FBFBFD;
+}
+
+ion-toolbar{
+    --background: #FBFBFD;
+    ion-back-button{
+        --color: black;
+    }
 }
 
 .container {
@@ -10,16 +14,8 @@ ion-content {
     flex-direction: column;
     justify-content: center;
     padding-inline: 20px;
-    //background-color: yellow;
     color: black;
     min-height: 90%;
-}
-
-img {
-    width: 95px;
-    height: 86px;
-    align-self: center;
-    opacity: 100%;
 }
 
 .login-container {
@@ -104,40 +100,19 @@ ion-button {
     color: black;
 }
 
-ion-button.forgot-bttn{
-    --background: clear;
-    --background-activated: rgba(0, 0, 0, 0.04);
-    --color: #007AFF;
-    font-family: 'Inter', 'sans-serif';
-   
-    align-self: center;
-    --padding-start: 0px;
-    --padding-end: 0px;
-    --padding-top: 0px;
-    height: 20px;
-    width: 45vw;
-    ion-label{
-        font-weight: lighter;
-        font-size: 13px;
-    }
-}
-
 .login-with {
-    //background-color: red;
     color: rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: flex-end;
     padding-top: 105px;
-    //height: 105px;
     gap: 12px;
     font-size: 12px;
     font-family: 'Inter', sans-serif;
 }
 
 #txt-login-with {
-    //background-color: aqua;
     margin-top: -3px;
 }
 
@@ -156,7 +131,6 @@ ion-button.forgot-bttn{
 }
 
 .container-connect {
-    //background-color: green;
     padding-top: 20px;
     display: flex;
     justify-content: center;
@@ -198,32 +172,3 @@ ion-button.forgot-bttn{
 #bttn-google {
     --background: #C6C9D0;
 }
-
-.no-account-container {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 12px;
-    padding-top: 46px;
-    #txt-no-account {
-        padding-top: 7px;
-        color: rgba(118,118,118,0.9)
-    }
-    ion-button.noaccount-bttn{
-        --background: clear;
-        --background-activated: rgba(0, 0, 0, 0.04);
-        --color: #007AFF;
-        font-family: 'Inter', 'sans-serif';
-        align-self: center;
-        --padding-start: 0px;
-        --padding-end: 0px;
-        --padding-top: 0px;
-        height: 20px;
-        width: 24vw;
-        ion-label{
-            font-weight: lighter;
-            font-size: 12px;
-        }
-    }
-}
-
-

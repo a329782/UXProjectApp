@@ -1,28 +1,29 @@
-<ion-content [forceOverscroll]="false">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large"></ion-title>
-    </ion-toolbar>
-  </ion-header> 
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Cancelar" defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+
+<ion-content forceOverscroll="false">
 
   <div class="container">
 
-    <img src="assets/img/logo.png" alt="logo">
-    
     <div class="login-container">
       <ion-thumbnail>
         
       </ion-thumbnail>
 
       
-      <ion-text id="txt-login">Iniciar sesión</ion-text>
+      <ion-text id="txt-login">Crea tu cuenta</ion-text>
 
       <div class="items-container">
         <div class="item-container">
           <ion-item lines="none">
             <ion-icon name="person-outline"></ion-icon>
             <ion-label position="floating">Correo electrónico</ion-label>
-            <ion-input type="email" [(ngModel)]="myAuth"></ion-input>
+            <ion-input type="email"></ion-input>
           </ion-item>
         </div>
         <div class="item-container">
@@ -32,15 +33,18 @@
             <ion-input type="password" [clearOnEdit]="true"></ion-input>
           </ion-item>
         </div>
+        <div class="item-container">
+          <ion-item lines="none">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <ion-label position="floating">Confirmar contraseña</ion-label>
+            <ion-input type="password" [clearOnEdit]="true"></ion-input>
+          </ion-item>
+        </div>
       </div>
 
-      <ion-button id="bttn-login" (click)="signIn(myAuth)">Iniciar Sesion</ion-button>
+      <ion-button id="bttn-login">Registrarse</ion-button>
 
     </div>
-
-    <ion-button expand="block" fill="solid" shape="round" class="forgot-bttn" [routerLink]="['/confirm-email']">
-      <ion-label>¿Olvidaste tu contraseña?</ion-label>
-    </ion-button>
 
     <div class="login-with">
 
@@ -68,15 +72,6 @@
       
     </div>
 
-    <div class="no-account-container">
-      <ion-text id="txt-no-account">¿Aún no tienes cuenta?</ion-text>
-      <ion-button [routerLink]="['/create-account']" expand="block" fill="solid" shape="round" class="noaccount-bttn">
-        <ion-label>Registrarse</ion-label>
-      </ion-button>
-    </div>
-
   </div>
 
-
 </ion-content>
-

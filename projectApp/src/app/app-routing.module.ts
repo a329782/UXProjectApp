@@ -33,6 +33,22 @@ const routes: Routes = [
   {
     path: 'ingame-arbitro',
     loadChildren: () => import('./ingame-arbitro/ingame-arbitro.module').then( m => m.IngameArbitroPageModule)
+  },
+  {
+    path: 'create-account',
+    loadChildren: () => import('./create-account/create-account.module').then( m => m.CreateAccountPageModule)
+  },
+  {
+    path: 'change-password-login',
+    loadChildren: () => import('./change-password-login/change-password-login.module').then( m => m.ChangePasswordLoginPageModule)
+  },
+  {
+    path: 'email-code',
+    loadChildren: () => import('./email-code/email-code.module').then( m => m.EmailCodePageModule)
+  },
+  {
+    path: 'confirm-email',
+    loadChildren: () => import('./confirm-email/confirm-email.module').then( m => m.ConfirmEmailPageModule)
   }
 ];
 
