@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&display=swap');
 
+ion-toolbar{
+    --background: #FBFBFD;
+}
+
 ion-content {
     --ion-background-color: #FBFBFD;
 }
@@ -39,15 +43,14 @@ img {
     }
 
     .item-container{
-        background-color: #FBFBFD;
-        width: 300px;
+        width: 98vw;
         display: flex;
         justify-content: center;
         ion-item{
             --background: #FBFBFD;
             --padding-start: 13px;
             --padding-end: 5px;
-            width: 82vw;
+            width: 78vw;
             --min-height: 9.7vh;
             ion-input{
                 border-radius: 8px;
@@ -58,8 +61,7 @@ img {
                 position: absolute;
                 top: 10px;
                 left: 0;
-                width: 280px;
-                height: 60px;
+                height: 7.4vh;
                 --padding-start: 3rem;
                 --color: black;
             }
@@ -88,7 +90,7 @@ img {
 }
 
 ion-button {
-    width: 281px;
+    width: 75vw;
     height: 42px;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
@@ -102,6 +104,7 @@ ion-button {
     --border-width: 1px;
     --border-radius: 18px;
     color: black;
+    padding-left: 8px;
 }
 
 ion-button.forgot-bttn{
@@ -156,7 +159,6 @@ ion-button.forgot-bttn{
 }
 
 .container-connect {
-    //background-color: green;
     padding-top: 20px;
     display: flex;
     justify-content: center;

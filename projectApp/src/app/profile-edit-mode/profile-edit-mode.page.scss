@@ -48,8 +48,7 @@ ion-toolbar {
 }
 
 .item-container{
-    background-color: #FBFBFD;
-    width: 360px;
+    width: 98vw;
     display: flex;
     justify-content: center;
     ion-item{
@@ -67,8 +66,7 @@ ion-toolbar {
             position: absolute;
             top: 10px;
             left: 0;
-            width: 280px;
-            height: 60px;
+            height: 7.4vh;
             --padding-start: 1rem;
             --color: black;
         }
