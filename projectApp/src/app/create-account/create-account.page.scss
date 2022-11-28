@@ -36,7 +36,7 @@ ion-toolbar{
 
     .item-container{
         background-color: #FBFBFD;
-        width: 300px;
+        width: 98vw;
         display: flex;
         justify-content: center;
         ion-item{
@@ -54,8 +54,7 @@ ion-toolbar{
                 position: absolute;
                 top: 10px;
                 left: 0;
-                width: 280px;
-                height: 60px;
+                height: 7.4vh;
                 --padding-start: 3rem;
                 --color: black;
             }
@@ -84,7 +83,7 @@ ion-toolbar{
 }
 
 ion-button {
-    width: 281px;
+    width: 79vw;
     height: 42px;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
@@ -98,6 +97,7 @@ ion-button {
     --border-width: 1px;
     --border-radius: 18px;
     color: black;
+    padding-left: 8px;
 }
 
 .login-with {
