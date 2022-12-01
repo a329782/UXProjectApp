@@ -158,7 +158,7 @@ export class LeaguesService {
         { id: 1, name: 'Tacos Gera', pts: 28, pos: 2},
         { id: 2, name: 'Los temerarios', pts: 26, pos: 3},
         { id: 3, name: 'Caballeros', pts: 25, pos: 4},
-        { id: 4, name: 'Galacticos', pts: 25, pos: 5},
+        { id: 4, name: 'Galacticos', pts: 22, pos: 5},
         { id: 5, name: 'Gasolineras Carvel', pts: 21, pos: 6},
         { id: 6, name: 'Bonus team', pts: 19, pos: 7},
         { id: 7, name: 'Jidosha', pts: 18, pos: 8}
@@ -206,7 +206,7 @@ export class LeaguesService {
         { id: 1, name: 'La cabañita', pts: 28, pos: 2},
         { id: 2, name: 'Juaguares', pts: 26, pos: 3},
         { id: 3, name: 'Perfiles del real', pts: 25, pos: 4},
-        { id: 4, name: 'Vetados', pts: 25, pos: 5},
+        { id: 4, name: 'Vetados', pts: 23, pos: 5},
         { id: 5, name: 'La carreta', pts: 21, pos: 6},
         { id: 6, name: 'Los capis', pts: 11, pos: 7},
         { id: 7, name: 'Don Goyo', pts: 9, pos: 8}
