@@ -16,6 +16,18 @@ ion-toolbar {
         font-weight: 600;
         color: black;
     }
+    ion-button{
+        --color: #3e2723;
+        --background: clear;
+        --background-activated: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.toolbar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 ion-label{

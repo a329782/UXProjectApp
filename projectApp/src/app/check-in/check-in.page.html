@@ -1,0 +1,24 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+
+    <div class="toolbar-container">
+      <div class="back-btn-container">
+        <ion-back-button text="Regresar"></ion-back-button>
+      </div>
+      <ion-label>Notificaciones</ion-label>
+      <div class="space-right"></div>
+    </div>
+
+    <div class="toolbar-line"></div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-label>Latitud: {{lat}} </ion-label>
+    <ion-label>Longitud: {{lng}} </ion-label>
+    <ion-button (click)="whereIAm()" expand="block" fill="solid" shape="round">
+    Hacer check-in
+    </ion-button>
+  </div>
+</ion-content>

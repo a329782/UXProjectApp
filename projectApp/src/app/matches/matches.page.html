@@ -1,8 +1,12 @@
 <ion-header mode="ios">
   <ion-toolbar>
-    
-    <ion-label>Partidos</ion-label>
+    <div class="toolbar-container">
 
+      <ion-label>Partidos</ion-label>
+      <ion-button [routerLink]="['/check-in']">
+        Check-In <ion-icon name="compass"></ion-icon>
+      </ion-button>
+    </div>
     <div class="toolbar-line"></div>
   </ion-toolbar>
 </ion-header>
