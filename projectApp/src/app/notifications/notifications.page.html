@@ -1,0 +1,31 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+
+    <div class="toolbar-container">
+      <div class="back-btn-container">
+        <ion-back-button text="Regresar"></ion-back-button>
+      </div>
+      <ion-label>Notificaciones</ion-label>
+      <div class="space-right"></div>
+    </div>
+
+    <div class="toolbar-line"></div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [forceOverscroll]="false">
+  <ion-list lines="inset">
+    <ion-item>
+        <ion-label text-wrap>Recibir notificaciones push 10 minutos antes de tener un partido.</ion-label>
+      <ion-toggle slot="end" [checked]="true"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label text-wrap>Recibir notifaciones push cuando sea aceptado en algún equipo.</ion-label>
+      <ion-toggle slot="end" [checked]="true"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label text-wrap>Recibir notificaciones push cuando vaya a comenzar la liguilla.</ion-label>
+      <ion-toggle slot="end"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>
