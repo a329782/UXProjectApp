@@ -1,0 +1,52 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+
+    <div class="toolbar-container">
+      <div class="back-btn-container">
+        <ion-back-button text="Regresar" defaultHref="/tabs/profile"></ion-back-button>
+      </div>
+      <ion-label>Ajustes</ion-label>
+      <div class="space-right"></div>
+    </div>
+
+    <div class="toolbar-line"></div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [forceOverscroll]="false">
+  
+  <div class="profile-container">
+    <ion-icon name="person-circle"></ion-icon>
+    <ion-label>{{usuario}} {{paterno}}</ion-label>
+  </div>
+  <div class="container">
+
+
+    <ion-list lines="inset">
+      <ion-item button [routerLink]="['/profile-edit-mode']">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>
+          <h3>Editar perfil</h3>
+        </ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/profile-edit-mode']">
+        <ion-icon name="notifications-circle"></ion-icon>
+        <ion-label>
+          <h3>Notificaciones</h3>
+        </ion-label>
+      </ion-item>
+      <ion-item button>
+        <ion-icon name="help-circle"></ion-icon>
+        <ion-label>
+          <h3>Soporte</h3>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  
+    <ion-button (click)="logout()" expand="block" fill="Solid" shape="round" class="logout-bttn" style="--color: red;">
+      Cerrar Sesión
+    </ion-button>
+  </div>
+
+</ion-content>

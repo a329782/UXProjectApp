@@ -49,6 +49,10 @@ const routes: Routes = [
   {
     path: 'confirm-email',
     loadChildren: () => import('./confirm-email/confirm-email.module').then( m => m.ConfirmEmailPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   }
 ];
 

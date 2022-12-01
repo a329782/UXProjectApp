@@ -3,7 +3,7 @@
     
     <div class="toolbar-container">
       <ion-buttons>
-        <ion-back-button text="Atrás" defaultHref="/tabs/profile"></ion-back-button>
+        <ion-back-button text="Cancelar"></ion-back-button>
       </ion-buttons>
       <ion-label>Mi Perfil</ion-label>
       <ion-button fill="clear" (click)="newName()">Hecho</ion-button>
@@ -64,11 +64,8 @@
           <ion-input type="password" [(ngModel)]="confPassword"></ion-input>
         </ion-item>
       </div>
-  </div>
+    </div>
 
-    <ion-button (click)="logout()" expand="block" fill="Solid" shape="round" class="logout-bttn" style="--color: red;">
-      Cerrar Sesion
-    </ion-button>
   </div>
 
 
