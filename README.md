@@ -37,7 +37,7 @@ Podemos decir sin lugar a dudas que esta experiencia impactó nuestro punto de v
 ## Requerimientos del proyecto
 Para correr el proyecto es esencial instalar los siguientes programas y actualizaciones:
 
-**Git y Node JS/NPM**
+#### **Git y Node JS/NPM**
 [Esta guía](https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu-and-update-npm-to-the-latest-version/) tiene lo necesario para instalar Node y actualizar NPM, y esta otra [guía oficial de github](https://github.com/git-guides/install-git) contiene lo necesario para instalar git.
 
 **Clonando el repositorio**
