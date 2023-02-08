@@ -40,18 +40,18 @@ Para correr el proyecto es esencial instalar los siguientes programas y actualiz
 #### **Git y Node JS/NPM**
 [Esta guía](https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu-and-update-npm-to-the-latest-version/) tiene lo necesario para instalar Node y actualizar NPM, y esta otra [guía oficial de github](https://github.com/git-guides/install-git) contiene lo necesario para instalar git.
 
-**Clonando el repositorio**
+#### **Clonando el repositorio**
 Empezamos por clonar el repositorio actual, podemos utilizar el comando:
 ```
 git clone https://github.com/a329782/UXProjectApp.git
 ```
 
-**Ionic CLI**
+#### **Ionic CLI**
 ```
 npm install -g @ionic/cli
 ```
 
-**Dependencias del proyecto**
+#### **Dependencias del proyecto**
 Debido a la forma en la que configuramos el repositorio, se tiene que navegar a la carpeta interna projectApp:
 ```
 cd ./projectApp
@@ -71,7 +71,7 @@ Y se iniciará una pagina en la dirección http://localhost:8100/login y tendrem
 
 ![imagen](https://user-images.githubusercontent.com/10736003/217411407-f06cbed4-a3e2-45a3-bf37-e01d308376fd.png)
 
-**Vista de jugador**
+### **Vista de jugador**
 Para acceder a esta vista de la aplicación debemos escribir lo siguiente en el campo del correo
 ```
 user
@@ -80,7 +80,7 @@ y dar click en iniciar sesión.
 
 ![imagen](https://user-images.githubusercontent.com/10736003/217411553-da880f06-a2e2-463d-8de3-853d1f62bae6.png)
 
-**Vista de capitán**
+### **Vista de capitán**
 Para acceder a esta vista de la aplicación debemos escribir lo siguiente en el campo del correo
 ```
 capitan
@@ -89,7 +89,7 @@ y dar click en iniciar sesión.
 
 ![imagen](https://user-images.githubusercontent.com/10736003/217411876-dac64555-b239-4bf7-b116-1aa5ea4bb1d1.png)
 
-**Vista de arbitro**
+### **Vista de arbitro**
 Para acceder a esta vista de la aplicación debemos escribir lo siguiente en el campo del correo
 ```
 arbitro
